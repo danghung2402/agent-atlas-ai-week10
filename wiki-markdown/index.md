@@ -14,3 +14,4 @@
 - [成果驗收：以狀態和證據判斷完成](evaluation.md)
 - [ReAct、Toolformer、Reflexion 一樣嗎？](methods-are-different.md)
 - [代理何時應該停止？](when-stop.md)
+- [案例：工作與課業排程助手](schedule-case.md)

@@ -32,6 +32,7 @@
 - [工具呼叫：名稱、參數、結果](tool-use.md)
 - [成果驗收：以狀態和證據判斷完成](evaluation.md)
 - [S01｜ReAct](react-paper.md)
+- [案例：工作與課業排程助手](schedule-case.md)
 
 ## 反向連結
 

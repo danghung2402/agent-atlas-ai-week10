@@ -26,9 +26,11 @@ Toolformer 學習選擇 API、呼叫時機與參數，並將工具結果納入�
 - [S02｜Toolformer](toolformer-paper.md)
 - [AI Agent 的基本組件](agent-basics.md)
 - [代理何時應該停止？](when-stop.md)
+- [案例：工作與課業排程助手](schedule-case.md)
 
 ## 反向連結
 
 - [S02｜Toolformer](toolformer-paper.md)
 - [AI Agent 的基本組件](agent-basics.md)
 - [代理何時應該停止？](when-stop.md)
+- [案例：工作與課業排程助手](schedule-case.md)

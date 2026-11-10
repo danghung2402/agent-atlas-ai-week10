@@ -29,9 +29,11 @@ Reflexion 的文字記憶並不是重新訓練權重。把記憶附進下一次�
 - [S03｜Reflexion](reflexion-paper.md)
 - [ReAct、Toolformer、Reflexion 一樣嗎？](methods-are-different.md)
 - [成果驗收：以狀態和證據判斷完成](evaluation.md)
+- [案例：工作與課業排程助手](schedule-case.md)
 
 ## 反向連結
 
 - [S03｜Reflexion](reflexion-paper.md)
 - [ReAct：每次動作後看結果](react-loop.md)
 - [ReAct、Toolformer、Reflexion 一樣嗎？](methods-are-different.md)
+- [案例：工作與課業排程助手](schedule-case.md)

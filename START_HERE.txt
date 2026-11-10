@@ -1,3 +1,3 @@
-解壓縮後，請以瀏覽器開啟 index.html。教學簡報為 deck.html。
-Sau khi giải nén, mở index.html hoặc deck.html bằng trình duyệt.
-Wiki và slide đọc được từ các tệp HTML; liên kết PDF bên ngoài cần mạng.
+解壓縮後開啟 index.html；簡報為 deck.html；排程實驗為 schedule.html。
+Sau khi giải nén, mở index.html, deck.html hoặc schedule.html bằng trình duyệt.
+Ví dụ lịch học là dữ liệu minh họa; không kết nối tài khoản hay cần API key.

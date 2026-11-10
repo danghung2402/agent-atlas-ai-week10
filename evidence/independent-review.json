@@ -1,0 +1,729 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-11",
+  "review_type": "Independent bounded AI source-fidelity and teaching-content review",
+  "reviewer_context": {
+    "fresh_agent_context": true,
+    "prior_conversation_history_used": false,
+    "same_model_family_as_parent": true,
+    "external_human_review": false,
+    "statement": "This review used a fresh agent context. It is a second AI review from the same model family, not external human review."
+  },
+  "method": {
+    "tools": [
+      "Python",
+      "PyMuPDF 1.28.2",
+      "hashlib.sha256",
+      "JSON parsing"
+    ],
+    "steps": [
+      "Read all four assigned content JSON files.",
+      "Extract source text directly from pinned raw/S01.pdf through raw/S05.pdf and semantically compare all 16 substantive claims to the cited pages and surrounding relevant sections.",
+      "Compare each of the 17 selected-page excerpts to direct source extraction.",
+      "Normalize Unicode ligatures with NFKC and join whitespace for anchor checks; inspect the surrounding language rather than equating an anchor match with semantic support.",
+      "Check historical metric scope, source-version labels, method/training distinctions, content cross-references, schedule-example attribution, and stated interval arithmetic.",
+      "Reopen and hash the final corrected claims.json and verify the C15 anchor resolution."
+    ],
+    "page_numbering": "One-based physical PDF pages; these coincide with the cited printed page numbers for reviewed locations.",
+    "substantively_inspected_pdf_pages": {
+      "S01": [
+        1,
+        3,
+        6
+      ],
+      "S02": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "S03": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "S04": [
+        1,
+        3,
+        4
+      ],
+      "S05": [
+        1,
+        2,
+        3,
+        6
+      ]
+    }
+  },
+  "limits": [
+    "Review is restricted to the assigned artifact content and pinned sources; no unrelated browsing was used.",
+    "PDF review used extractable text rather than a rendered layout audit. Figure text with encoding noise was not treated as the sole support for claims.",
+    "No deployment, browser UI, source-code, automated scheduling run, schedule-result artifact, external calendar, or learning-outcome verification was performed.",
+    "Assertions about the user conversation, project authorization, execution history, downloadable artifacts, and runtime behavior were not independently established.",
+    "A fresh AI context reduces shared conversational assumptions but does not provide independence of model family or substitute for an external human review."
+  ],
+  "inputs_reviewed": [
+    {
+      "path": "content/claims.json",
+      "sha256": "e6520a5b0fe168188f767685ae9ac8eca92945f4dceacc12f03581ec09c704c4",
+      "bytes": 4114
+    },
+    {
+      "path": "content/wiki.json",
+      "sha256": "34ee6cf209b54a35f8fb6ed96f682e764b9926ec7b2b04929041cefc6476f0b0",
+      "bytes": 21270
+    },
+    {
+      "path": "content/deck.json",
+      "sha256": "bcc9d42451588427fe83d85c74a3187d4cf32e6517eb8e47c8ed38cfcf66598f",
+      "bytes": 10961
+    },
+    {
+      "path": "content/comparison.json",
+      "sha256": "1006a6df004bd29d9e52d7754e556f44ae3cd7a7c3de3ca0fb7e9c81253de09b",
+      "bytes": 2210
+    },
+    {
+      "path": "raw/S01.pdf",
+      "sha256": "f285b0971ae4a790e402fb93966bed3adde2cf0a04977d08b2b40d6ab0cace69",
+      "bytes": 633805
+    },
+    {
+      "path": "raw/S02.pdf",
+      "sha256": "6d7483d94653008e40c2058a1c22441c92e3713dae278b6361e8efc447c99522",
+      "bytes": 657966
+    },
+    {
+      "path": "raw/S03.pdf",
+      "sha256": "6059b6f89fea9959bd3dab553fbb97756a3dfb1b15e3cbab2fbf3ab6664333bd",
+      "bytes": 591097
+    },
+    {
+      "path": "raw/S04.pdf",
+      "sha256": "6d599fcccc36b9bbe3f7700da916fac547d14b9d94a676bc677d1851d52bf7c8",
+      "bytes": 23176585
+    },
+    {
+      "path": "raw/S05.pdf",
+      "sha256": "f9731b92bc3d29a2ea7b5f9cb46b48540c76bc3f84a57e0c48fc37ea73107f95",
+      "bytes": 9128123
+    },
+    {
+      "path": "evidence/review-inputs/S01-selected-pages.txt",
+      "sha256": "835ba9cffff2082450e7b268ed2087b9fcb685fa296a292cccb3172b99dd1fd7",
+      "bytes": 10082
+    },
+    {
+      "path": "evidence/review-inputs/S02-selected-pages.txt",
+      "sha256": "41b75b81d3853d27dd745df7d64ccd5b48d8626d21551d89782b67021e6afd5b",
+      "bytes": 22340
+    },
+    {
+      "path": "evidence/review-inputs/S03-selected-pages.txt",
+      "sha256": "a399672b9e9a62e142a94622c1cb88d728a7121ca9b629c2c0dbbcaebb05cdec",
+      "bytes": 16235
+    },
+    {
+      "path": "evidence/review-inputs/S04-selected-pages.txt",
+      "sha256": "7c420ce6ac67bd4845f3823560263148b2e4f1021cedfedcd0b414a36321aca6",
+      "bytes": 12318
+    },
+    {
+      "path": "evidence/review-inputs/S05-selected-pages.txt",
+      "sha256": "0b5d38ecdb11abcd0bebebae0d265fe358fab064a43074b8e985a756126ea96d",
+      "bytes": 13766
+    }
+  ],
+  "pinned_pdf_versions": [
+    {
+      "source": "S01",
+      "pdf": "raw/S01.pdf",
+      "pdf_page_count": 33,
+      "version_line": "arXiv:2210.03629v3  [cs.CL]  10 Mar 2023"
+    },
+    {
+      "source": "S02",
+      "pdf": "raw/S02.pdf",
+      "pdf_page_count": 17,
+      "version_line": "arXiv:2302.04761v1  [cs.CL]  9 Feb 2023"
+    },
+    {
+      "source": "S03",
+      "pdf": "raw/S03.pdf",
+      "pdf_page_count": 19,
+      "version_line": "arXiv:2303.11366v4  [cs.AI]  10 Oct 2023"
+    },
+    {
+      "source": "S04",
+      "pdf": "raw/S04.pdf",
+      "pdf_page_count": 55,
+      "version_line": "arXiv:2308.03688v2  [cs.AI]  25 Oct 2023"
+    },
+    {
+      "source": "S05",
+      "pdf": "raw/S05.pdf",
+      "pdf_page_count": 22,
+      "version_line": "arXiv:2307.13854v4  [cs.AI]  16 Apr 2024"
+    }
+  ],
+  "initial_findings": [
+    {
+      "id": "F01",
+      "severity": "low",
+      "evidence_ids": [
+        "C15"
+      ],
+      "location": "content/claims.json:C15.anchor",
+      "finding": "The initial locator paired PDF page 3 with anchor standalone, which occurs on page 2. The substantive claim was supported by the paragraph spanning pages 2-3.",
+      "initial_claims_sha256": "8b04bfa913c02d0d281d638e8e4ee23a538f67a6fe4f63ea8d4322b8cc21b9fb",
+      "required_change": "Use a page-3 anchor such as CAPTCHAs, or represent pages 2-3.",
+      "status": "resolved_and_verified",
+      "verified_resolution": "Final C15 retains page 3 and uses CAPTCHAs, present on that source page.",
+      "final_claims_sha256": "e6520a5b0fe168188f767685ae9ac8eca92945f4dceacc12f03581ec09c704c4"
+    }
+  ],
+  "items": [
+    {
+      "id": "IR-C01",
+      "evidence_ids": [
+        "C01"
+      ],
+      "status": "supported",
+      "content_claim_page": 3,
+      "pdf_evidence": [
+        {
+          "source": "S01",
+          "pdf_page": 3
+        }
+      ],
+      "assessment": "Section 2 defines environment observations and context-conditioned actions, expands the action space with language reasoning, and uses thought-action-observation trajectories. The paraphrase preserves the interaction mechanism."
+    },
+    {
+      "id": "IR-C02",
+      "evidence_ids": [
+        "C02"
+      ],
+      "status": "supported",
+      "content_claim_page": 3,
+      "pdf_evidence": [
+        {
+          "source": "S01",
+          "pdf_page": 3
+        }
+      ],
+      "assessment": "Section 2 explicitly identifies a frozen PaLM-540B prompted with few-shot examples as the main setup. The warning against describing every step as retraining follows from that setup."
+    },
+    {
+      "id": "IR-C03",
+      "evidence_ids": [
+        "C03"
+      ],
+      "status": "supported",
+      "content_claim_page": 1,
+      "pdf_evidence": [
+        {
+          "source": "S02",
+          "pdf_page": 1
+        }
+      ],
+      "assessment": "The abstract states that the model is trained to choose APIs, timing, arguments, and incorporation of results into future token prediction."
+    },
+    {
+      "id": "IR-C04",
+      "evidence_ids": [
+        "C04"
+      ],
+      "status": "supported",
+      "content_claim_page": 2,
+      "pdf_evidence": [
+        {
+          "source": "S02",
+          "pdf_page": 2
+        }
+      ],
+      "assessment": "Figure 2 and Section 2 describe sampling candidate calls, executing them, filtering for lower future-token prediction loss, and finetuning on the augmented retained data."
+    },
+    {
+      "id": "IR-C05",
+      "evidence_ids": [
+        "C05"
+      ],
+      "status": "supported",
+      "content_claim_page": 1,
+      "pdf_evidence": [
+        {
+          "source": "S03",
+          "pdf_page": 1
+        },
+        {
+          "source": "S03",
+          "pdf_page": 2
+        },
+        {
+          "source": "S03",
+          "pdf_page": 4
+        }
+      ],
+      "assessment": "The abstract explicitly contrasts linguistic feedback with updating weights and describes reflective text held in episodic memory for subsequent trials. Later sections describe the memory context."
+    },
+    {
+      "id": "IR-C06",
+      "evidence_ids": [
+        "C06"
+      ],
+      "status": "supported",
+      "content_claim_page": 1,
+      "pdf_evidence": [
+        {
+          "source": "S04",
+          "pdf_page": 1
+        }
+      ],
+      "assessment": "The pinned AgentBench v2 abstract states eight distinct environments for reasoning and decision making in a multi-turn setting."
+    },
+    {
+      "id": "IR-C07",
+      "evidence_ids": [
+        "C07"
+      ],
+      "status": "supported",
+      "content_claim_page": 1,
+      "pdf_evidence": [
+        {
+          "source": "S04",
+          "pdf_page": 1
+        }
+      ],
+      "assessment": "The abstract names poor long-term reasoning, decision making, and instruction following as main obstacles. The content attributes this finding to AgentBench."
+    },
+    {
+      "id": "IR-C08",
+      "evidence_ids": [
+        "C08"
+      ],
+      "status": "supported",
+      "content_claim_page": 6,
+      "pdf_evidence": [
+        {
+          "source": "S05",
+          "pdf_page": 6
+        }
+      ],
+      "assessment": "Section 3.2 distinguishes textual-answer scoring from programmatic examination of website state for navigation and content/configuration tasks. The content correctly summarizes functional goal satisfaction."
+    },
+    {
+      "id": "IR-C09",
+      "evidence_ids": [
+        "C09"
+      ],
+      "status": "supported",
+      "content_claim_page": 2,
+      "pdf_evidence": [
+        {
+          "source": "S05",
+          "pdf_page": 1
+        },
+        {
+          "source": "S05",
+          "pdf_page": 2
+        }
+      ],
+      "assessment": "The pinned WebArena v4 abstract and introduction both report a best GPT-4-based agent end-to-end task success rate of 14.41% and human performance of 78.24%. The wiki, deck, and claim label these as historical results in that study setting."
+    },
+    {
+      "id": "IR-C10",
+      "evidence_ids": [
+        "C10"
+      ],
+      "status": "supported",
+      "content_claim_page": 6,
+      "pdf_evidence": [
+        {
+          "source": "S01",
+          "pdf_page": 6
+        }
+      ],
+      "assessment": "The HotpotQA analysis describes repetitive previous thoughts/actions, failure to escape the loop, and non-informative or empty search results. The content does not turn these case-study findings into a universal claim."
+    },
+    {
+      "id": "IR-C11",
+      "evidence_ids": [
+        "C11"
+      ],
+      "status": "supported",
+      "content_claim_page": 6,
+      "pdf_evidence": [
+        {
+          "source": "S02",
+          "pdf_page": 5
+        },
+        {
+          "source": "S02",
+          "pdf_page": 6
+        },
+        {
+          "source": "S02",
+          "pdf_page": 8
+        }
+      ],
+      "assessment": "The downstream-task decoding setup spans pages 5-6 and restricts evaluation to at most one API call per input; page 8 explicitly confirms the one-call-per-example restriction and its prevention of a calendar-then-QA composition.",
+      "notes": {
+        "extraction_audit": "Checked direct PyMuPDF page text and the matching selected excerpts. Used NFKC Unicode normalization and whitespace joining to handle ligatures and line breaks. The anchor is present on pages 6 and 8. Page 6 extracts the awkward wording \"we only at most one API call per input\"; the explicit page 8 restriction confirms the interpretation. This is an evaluation restriction in this pinned version, not a proof that every possible Toolformer implementation must make exactly one call.",
+        "teaching_boundary": "The comparison and slide notes correctly avoid presenting the paper as a validated multi-step calendar agent."
+      }
+    },
+    {
+      "id": "IR-C12",
+      "evidence_ids": [
+        "C12"
+      ],
+      "status": "supported",
+      "content_claim_page": 3,
+      "pdf_evidence": [
+        {
+          "source": "S03",
+          "pdf_page": 3
+        },
+        {
+          "source": "S03",
+          "pdf_page": 4
+        }
+      ],
+      "assessment": "Section 3 names Actor, Evaluator, and Self-Reflection and distinguishes their functions. Page 4 allows several evaluator implementations, consistent with teaching these as roles rather than three different commercial providers."
+    },
+    {
+      "id": "IR-C13",
+      "evidence_ids": [
+        "C13"
+      ],
+      "status": "supported",
+      "content_claim_page": 2,
+      "pdf_evidence": [
+        {
+          "source": "S03",
+          "pdf_page": 2
+        }
+      ],
+      "assessment": "The introduction explicitly states reliance on self-evaluation capabilities or heuristics and the absence of a formal guarantee of success."
+    },
+    {
+      "id": "IR-C14",
+      "evidence_ids": [
+        "C14"
+      ],
+      "status": "supported",
+      "content_claim_page": 4,
+      "pdf_evidence": [
+        {
+          "source": "S04",
+          "pdf_page": 3
+        },
+        {
+          "source": "S04",
+          "pdf_page": 4
+        }
+      ],
+      "assessment": "The finish-reason taxonomy includes context limit, invalid format, invalid action, task limit, and Complete defined as ending normally. Distinguishing normal termination from a separate goal-success judgment is a sound interpretation of that definition."
+    },
+    {
+      "id": "IR-C15",
+      "evidence_ids": [
+        "C15"
+      ],
+      "status": "supported",
+      "content_claim_page": 3,
+      "pdf_evidence": [
+        {
+          "source": "S05",
+          "pdf_page": 2
+        },
+        {
+          "source": "S05",
+          "pdf_page": 3
+        }
+      ],
+      "assessment": "Section 2 begins on page 2 with a standalone environment independent of live websites; page 3 continues with CAPTCHAs, unpredictable content modifications, and configuration changes. The realistic/reproducible environment is correctly distinguished from arbitrary live websites.",
+      "notes": {
+        "locator_resolution": "The initial page-3 anchor standalone was on page 2. The parent changed only the locator to CAPTCHAs; the final claims.json was reopened, hashed, and the corrected anchor was verified directly on PDF page 3."
+      }
+    },
+    {
+      "id": "IR-C16",
+      "evidence_ids": [
+        "C16"
+      ],
+      "status": "supported",
+      "content_claim_page": 6,
+      "pdf_evidence": [
+        {
+          "source": "S01",
+          "pdf_page": 3
+        },
+        {
+          "source": "S01",
+          "pdf_page": 6
+        }
+      ],
+      "assessment": "The contributions describe initial finetuning experiments; page 6 has a dedicated finetuning analysis. The wiki and comparison correctly avoid defining ReAct as a method that can never involve training."
+    },
+    {
+      "id": "IR-METHODS",
+      "evidence_ids": [
+        "C01",
+        "C02",
+        "C04",
+        "C05",
+        "C06",
+        "C08",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16"
+      ],
+      "status": "supported",
+      "content_locations": [
+        "content/comparison.json",
+        "content/wiki.json:methods-are-different",
+        "content/deck.json:05,06,11"
+      ],
+      "assessment": "The comparison separates interaction mechanism, learned tool use through finetuning, linguistic reflection/memory without weight updates, and evaluation environments. It does not assign a shared performance ranking to unlike methods or metrics."
+    },
+    {
+      "id": "IR-TEACHING",
+      "evidence_ids": [
+        "C01",
+        "C03",
+        "C05",
+        "C07",
+        "C08",
+        "C14"
+      ],
+      "status": "supported",
+      "content_locations": [
+        "content/wiki.json:agent-basics,react-loop,tool-use,feedback-memory,evaluation,when-stop,schedule-case",
+        "content/deck.json:01-14"
+      ],
+      "assessment": "The teaching progression links components, action/observation, tools, feedback/memory, failure, outcome evaluation, comparison, and retrieval quiz. Original definitions, cross-paper synthesis, project rules, and authored examples are labelled. The content does not claim student learning gains were empirically measured."
+    },
+    {
+      "id": "IR-SCHEDULE-CONTENT",
+      "evidence_ids": [
+        "C01",
+        "C03",
+        "C05",
+        "C08",
+        "C10",
+        "C11",
+        "C13",
+        "C14"
+      ],
+      "status": "supported",
+      "content_locations": [
+        "content/wiki.json:schedule-case",
+        "content/deck.json:02,03,04,05,06,07,08,10,12,13",
+        "content/comparison.json"
+      ],
+      "assessment": "The schedule is explicitly an illustrative authored fixture and fault-injection example, not the user real calendar, an original paper benchmark, or an autonomous-model performance experiment. The stated initial T1 interval 15:30-17:00 overlaps fixed work 15:00-16:00. Moving T1 to 16:00-17:30 preserves 90 minutes and the 18:00 deadline; T2 19:00-20:00 and T3 20:00-20:30 preserve their stated 60/30 minutes, 21:00 deadlines, and avoid the 18:00-19:00 course. These are content/arithmetic consistency checks only.",
+      "verified_schedule_execution": false,
+      "unverified_assertions": [
+        "Whether the referenced script was run successfully",
+        "Whether downloadable execution logs and schedule outputs match the prose",
+        "Whether the browser interactions and displayed runtime cases work",
+        "The claimed conversation date/user scenario selection, because conversation history was intentionally not supplied"
+      ]
+    },
+    {
+      "id": "IR-REFERENCE-INTEGRITY",
+      "evidence_ids": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16"
+      ],
+      "status": "supported",
+      "assessment": "Checked all cross-references in the reviewed JSON files: no unknown claim IDs, wiki related-page IDs, or deck wiki targets. All 13 wiki entries have claim references and all 14 deck pages have evidence references. All five papers are represented. This checks reference structure, not browser link operation.",
+      "counts": {
+        "claims": 16,
+        "wiki_entries": 13,
+        "deck_pages": 14,
+        "comparison_entries": 5
+      },
+      "unresolved_references": []
+    },
+    {
+      "id": "IR-EXCERPT-INTEGRITY",
+      "evidence_ids": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16"
+      ],
+      "status": "supported",
+      "assessment": "All 17 selected-page excerpts exactly match direct PyMuPDF extraction from the corresponding pinned PDF pages after trimming only outer whitespace. Semantic review used the original PDF text, not excerpts alone.",
+      "page_checks": [
+        {
+          "source": "S01",
+          "pdf_page": 3,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S01",
+          "pdf_page": 6,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S02",
+          "pdf_page": 1,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S02",
+          "pdf_page": 2,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S02",
+          "pdf_page": 6,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S02",
+          "pdf_page": 7,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S02",
+          "pdf_page": 8,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S03",
+          "pdf_page": 1,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S03",
+          "pdf_page": 2,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S03",
+          "pdf_page": 3,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S03",
+          "pdf_page": 4,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S04",
+          "pdf_page": 1,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S04",
+          "pdf_page": 3,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S04",
+          "pdf_page": 4,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S05",
+          "pdf_page": 2,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S05",
+          "pdf_page": 3,
+          "exact_match_after_trimming_outer_whitespace": true
+        },
+        {
+          "source": "S05",
+          "pdf_page": 6,
+          "exact_match_after_trimming_outer_whitespace": true
+        }
+      ]
+    }
+  ],
+  "required_changes": [],
+  "overall": "pass",
+  "overall_basis": "All 16 substantive claims are supported in the pinned PDFs, historical and methodological boundaries are preserved, and the only identified locator issue was corrected and verified. Pass applies to this bounded content review only; it is not schedule execution or UI validation.",
+  "representation_normalization": {
+    "audit_date": "2026-11-11",
+    "change": "Representation-only CRLF-to-LF line-ending normalization of the four assigned content JSON files for reproducible Git checkout hashes.",
+    "substantive_content_changed": false,
+    "verification": "Reopened all four current files. For each file, restoring CRLF from the current LF bytes reproduces the exact previously reviewed SHA-256; parsing both representations produces equal JSON values. All ten reviewed PDF and excerpt input hashes remain unchanged.",
+    "effect_on_review": "Input hashes and byte counts now identify the current LF files. The source-fidelity findings, teaching-content findings, scope limits, and overall pass are unchanged. No content files were modified by this follow-up review.",
+    "files": [
+      {
+        "path": "content/claims.json",
+        "previous_crlf_sha256": "61151fbf0a1f9f1bf01fca97983f4bc61d41e3f362cca6da2ec55f3f2e22c78e",
+        "previous_crlf_bytes": 4243,
+        "current_lf_sha256": "e6520a5b0fe168188f767685ae9ac8eca92945f4dceacc12f03581ec09c704c4",
+        "current_lf_bytes": 4114,
+        "restored_crlf_matches_previously_reviewed_hash": true,
+        "parsed_json_equivalent": true
+      },
+      {
+        "path": "content/wiki.json",
+        "previous_crlf_sha256": "d8d456aeebe1d944e7dd1dad4820c17f76dc99d1fd908139e72229ea548a1c16",
+        "previous_crlf_bytes": 21792,
+        "current_lf_sha256": "34ee6cf209b54a35f8fb6ed96f682e764b9926ec7b2b04929041cefc6476f0b0",
+        "current_lf_bytes": 21270,
+        "restored_crlf_matches_previously_reviewed_hash": true,
+        "parsed_json_equivalent": true
+      },
+      {
+        "path": "content/deck.json",
+        "previous_crlf_sha256": "e883ca1a2f2316ce671a92e1682d7f7f0f6d5b4467e103c756e28c5cd1e5183b",
+        "previous_crlf_bytes": 11386,
+        "current_lf_sha256": "bcc9d42451588427fe83d85c74a3187d4cf32e6517eb8e47c8ed38cfcf66598f",
+        "current_lf_bytes": 10961,
+        "restored_crlf_matches_previously_reviewed_hash": true,
+        "parsed_json_equivalent": true
+      },
+      {
+        "path": "content/comparison.json",
+        "previous_crlf_sha256": "de169e7369fd9b662720402990332412184ff3c869bf448612f9e521b3d69e4a",
+        "previous_crlf_bytes": 2282,
+        "current_lf_sha256": "1006a6df004bd29d9e52d7754e556f44ae3cd7a7c3de3ca0fb7e9c81253de09b",
+        "current_lf_bytes": 2210,
+        "restored_crlf_matches_previously_reviewed_hash": true,
+        "parsed_json_equivalent": true
+      }
+    ]
+  }
+}

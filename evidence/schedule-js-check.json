@@ -1,0 +1,52 @@
+{
+  "timestamp_utc": "2026-11-10T17:05:49.093Z",
+  "runtime": "Node.js pure validator; no browser or DOM execution",
+  "python_parity_cases": [
+    {
+      "case": "overlap",
+      "matched": true,
+      "status": "INVALID_DRAFT"
+    },
+    {
+      "case": "repaired",
+      "matched": true,
+      "status": "PASS"
+    },
+    {
+      "case": "missing",
+      "matched": true,
+      "status": "NEEDS_INPUT"
+    },
+    {
+      "case": "deadline",
+      "matched": true,
+      "status": "INVALID_DRAFT"
+    },
+    {
+      "case": "duration",
+      "matched": true,
+      "status": "INVALID_DRAFT"
+    },
+    {
+      "case": "coverage",
+      "matched": true,
+      "status": "INVALID_DRAFT"
+    },
+    {
+      "case": "fixed",
+      "matched": true,
+      "status": "INVALID_DRAFT"
+    },
+    {
+      "case": "limit",
+      "matched": true,
+      "status": "INVALID_DRAFT"
+    }
+  ],
+  "boundaries": [
+    "adjacent intervals accepted",
+    "invalid hour rejected",
+    "duplicate task rejected"
+  ],
+  "passed": true
+}

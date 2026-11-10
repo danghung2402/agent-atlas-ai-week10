@@ -32,6 +32,7 @@ Wiki 來源數、每頁引用、五篇覆蓋、頁內連結與原始檔雜湊用
 - [S04｜AgentBench](agentbench-paper.md)
 - [S05｜WebArena](webarena-paper.md)
 - [代理何時應該停止？](when-stop.md)
+- [案例：工作與課業排程助手](schedule-case.md)
 
 ## 反向連結
 
@@ -40,3 +41,4 @@ Wiki 來源數、每頁引用、五篇覆蓋、頁內連結與原始檔雜湊用
 - [AI Agent 的基本組件](agent-basics.md)
 - [回饋與記憶：把錯誤變成可用資訊](feedback-memory.md)
 - [代理何時應該停止？](when-stop.md)
+- [案例：工作與課業排程助手](schedule-case.md)

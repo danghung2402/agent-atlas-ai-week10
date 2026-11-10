@@ -1,0 +1,756 @@
+{
+  "timestamp_utc": "2026-11-10T16:57:11.440854+00:00",
+  "kind": "authored fault-injection and deterministic validator replay",
+  "not_model_benchmark": true,
+  "planner": "AI-authored initial and repaired drafts; no autonomous repair code",
+  "rules": [
+    "fixed events unchanged",
+    "every required event exactly once",
+    "valid time interval",
+    "within allowed window",
+    "exact task duration",
+    "before task deadline",
+    "no overlap"
+  ],
+  "cases": [
+    {
+      "id": "overlap",
+      "title": "初始衝突草稿",
+      "description": "刻意注入：T1 與固定工作重疊。",
+      "spec": {
+        "label": "自編排程情境，非使用者真實行事曆",
+        "timezone": "Asia/Taipei",
+        "day": "教學日 D1",
+        "window": {
+          "start": "15:00",
+          "end": "21:00"
+        },
+        "fixed": [
+          {
+            "id": "F1",
+            "title": "固定工作",
+            "start": "15:00",
+            "end": "16:00"
+          },
+          {
+            "id": "F2",
+            "title": "固定課程",
+            "start": "18:00",
+            "end": "19:00"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T1",
+            "title": "完成報告",
+            "duration_min": 90,
+            "due": "18:00"
+          },
+          {
+            "id": "T2",
+            "title": "AI 練習",
+            "duration_min": 60,
+            "due": "21:00"
+          },
+          {
+            "id": "T3",
+            "title": "課程複習",
+            "duration_min": 30,
+            "due": "21:00"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "F1",
+          "title": "固定工作",
+          "start": "15:00",
+          "end": "16:00"
+        },
+        {
+          "id": "F2",
+          "title": "固定課程",
+          "start": "18:00",
+          "end": "19:00"
+        },
+        {
+          "id": "T1",
+          "title": "完成報告",
+          "start": "15:30",
+          "end": "17:00"
+        },
+        {
+          "id": "T2",
+          "title": "AI 練習",
+          "start": "19:00",
+          "end": "20:00"
+        },
+        {
+          "id": "T3",
+          "title": "課程複習",
+          "start": "20:00",
+          "end": "20:30"
+        }
+      ],
+      "observed": {
+        "status": "INVALID_DRAFT",
+        "passed": false,
+        "errors": [
+          {
+            "code": "OVERLAP",
+            "detail": "F1 與 T1 時段重疊"
+          }
+        ]
+      },
+      "next": "REVISE_DRAFT",
+      "repair_round": 0
+    },
+    {
+      "id": "repaired",
+      "title": "局部修正版",
+      "description": "AI 作者只把 T1 移到 16:00–17:30；程式重跑驗收。",
+      "spec": {
+        "label": "自編排程情境，非使用者真實行事曆",
+        "timezone": "Asia/Taipei",
+        "day": "教學日 D1",
+        "window": {
+          "start": "15:00",
+          "end": "21:00"
+        },
+        "fixed": [
+          {
+            "id": "F1",
+            "title": "固定工作",
+            "start": "15:00",
+            "end": "16:00"
+          },
+          {
+            "id": "F2",
+            "title": "固定課程",
+            "start": "18:00",
+            "end": "19:00"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T1",
+            "title": "完成報告",
+            "duration_min": 90,
+            "due": "18:00"
+          },
+          {
+            "id": "T2",
+            "title": "AI 練習",
+            "duration_min": 60,
+            "due": "21:00"
+          },
+          {
+            "id": "T3",
+            "title": "課程複習",
+            "duration_min": 30,
+            "due": "21:00"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "F1",
+          "title": "固定工作",
+          "start": "15:00",
+          "end": "16:00"
+        },
+        {
+          "id": "F2",
+          "title": "固定課程",
+          "start": "18:00",
+          "end": "19:00"
+        },
+        {
+          "id": "T1",
+          "title": "完成報告",
+          "start": "16:00",
+          "end": "17:30"
+        },
+        {
+          "id": "T2",
+          "title": "AI 練習",
+          "start": "19:00",
+          "end": "20:00"
+        },
+        {
+          "id": "T3",
+          "title": "課程複習",
+          "start": "20:00",
+          "end": "20:30"
+        }
+      ],
+      "observed": {
+        "status": "PASS",
+        "passed": true,
+        "errors": []
+      },
+      "next": "READY_FOR_HUMAN",
+      "repair_round": 1
+    },
+    {
+      "id": "missing",
+      "title": "缺少時長",
+      "description": "刻意移除 T1 時長；應要求補資料，不能猜。",
+      "spec": {
+        "label": "自編排程情境，非使用者真實行事曆",
+        "timezone": "Asia/Taipei",
+        "day": "教學日 D1",
+        "window": {
+          "start": "15:00",
+          "end": "21:00"
+        },
+        "fixed": [
+          {
+            "id": "F1",
+            "title": "固定工作",
+            "start": "15:00",
+            "end": "16:00"
+          },
+          {
+            "id": "F2",
+            "title": "固定課程",
+            "start": "18:00",
+            "end": "19:00"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T1",
+            "title": "完成報告",
+            "due": "18:00"
+          },
+          {
+            "id": "T2",
+            "title": "AI 練習",
+            "duration_min": 60,
+            "due": "21:00"
+          },
+          {
+            "id": "T3",
+            "title": "課程複習",
+            "duration_min": 30,
+            "due": "21:00"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "F1",
+          "title": "固定工作",
+          "start": "15:00",
+          "end": "16:00"
+        },
+        {
+          "id": "F2",
+          "title": "固定課程",
+          "start": "18:00",
+          "end": "19:00"
+        },
+        {
+          "id": "T1",
+          "title": "完成報告",
+          "start": "16:00",
+          "end": "17:30"
+        },
+        {
+          "id": "T2",
+          "title": "AI 練習",
+          "start": "19:00",
+          "end": "20:00"
+        },
+        {
+          "id": "T3",
+          "title": "課程複習",
+          "start": "20:00",
+          "end": "20:30"
+        }
+      ],
+      "observed": {
+        "status": "NEEDS_INPUT",
+        "passed": false,
+        "errors": [
+          {
+            "code": "MISSING_INPUT",
+            "detail": "T1 缺少任務時長或期限"
+          }
+        ]
+      },
+      "next": "ASK_USER",
+      "repair_round": 0
+    },
+    {
+      "id": "deadline",
+      "title": "沒有重疊，卻逾期",
+      "description": "T1 仍足 90 分鐘且無重疊，但超過 18:00 截止。",
+      "spec": {
+        "label": "自編排程情境，非使用者真實行事曆",
+        "timezone": "Asia/Taipei",
+        "day": "教學日 D1",
+        "window": {
+          "start": "15:00",
+          "end": "21:00"
+        },
+        "fixed": [
+          {
+            "id": "F1",
+            "title": "固定工作",
+            "start": "15:00",
+            "end": "16:00"
+          },
+          {
+            "id": "F2",
+            "title": "固定課程",
+            "start": "18:00",
+            "end": "19:00"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T1",
+            "title": "完成報告",
+            "duration_min": 90,
+            "due": "18:00"
+          },
+          {
+            "id": "T2",
+            "title": "AI 練習",
+            "duration_min": 60,
+            "due": "21:00"
+          },
+          {
+            "id": "T3",
+            "title": "課程複習",
+            "duration_min": 30,
+            "due": "21:00"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "F1",
+          "title": "固定工作",
+          "start": "15:00",
+          "end": "16:00"
+        },
+        {
+          "id": "F2",
+          "title": "固定課程",
+          "start": "18:00",
+          "end": "19:00"
+        },
+        {
+          "id": "T1",
+          "title": "完成報告",
+          "start": "19:30",
+          "end": "21:00"
+        },
+        {
+          "id": "T2",
+          "title": "AI 練習",
+          "start": "16:00",
+          "end": "17:00"
+        },
+        {
+          "id": "T3",
+          "title": "課程複習",
+          "start": "17:00",
+          "end": "17:30"
+        }
+      ],
+      "observed": {
+        "status": "INVALID_DRAFT",
+        "passed": false,
+        "errors": [
+          {
+            "code": "DEADLINE",
+            "detail": "T1 晚於截止時間"
+          }
+        ]
+      },
+      "next": "REVISE_DRAFT",
+      "repair_round": 0
+    },
+    {
+      "id": "duration",
+      "title": "縮短任務的假修正",
+      "description": "T1 縮成 60 分鐘，雖無重疊仍不合需求。",
+      "spec": {
+        "label": "自編排程情境，非使用者真實行事曆",
+        "timezone": "Asia/Taipei",
+        "day": "教學日 D1",
+        "window": {
+          "start": "15:00",
+          "end": "21:00"
+        },
+        "fixed": [
+          {
+            "id": "F1",
+            "title": "固定工作",
+            "start": "15:00",
+            "end": "16:00"
+          },
+          {
+            "id": "F2",
+            "title": "固定課程",
+            "start": "18:00",
+            "end": "19:00"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T1",
+            "title": "完成報告",
+            "duration_min": 90,
+            "due": "18:00"
+          },
+          {
+            "id": "T2",
+            "title": "AI 練習",
+            "duration_min": 60,
+            "due": "21:00"
+          },
+          {
+            "id": "T3",
+            "title": "課程複習",
+            "duration_min": 30,
+            "due": "21:00"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "F1",
+          "title": "固定工作",
+          "start": "15:00",
+          "end": "16:00"
+        },
+        {
+          "id": "F2",
+          "title": "固定課程",
+          "start": "18:00",
+          "end": "19:00"
+        },
+        {
+          "id": "T1",
+          "title": "完成報告",
+          "start": "16:00",
+          "end": "17:00"
+        },
+        {
+          "id": "T2",
+          "title": "AI 練習",
+          "start": "19:00",
+          "end": "20:00"
+        },
+        {
+          "id": "T3",
+          "title": "課程複習",
+          "start": "20:00",
+          "end": "20:30"
+        }
+      ],
+      "observed": {
+        "status": "INVALID_DRAFT",
+        "passed": false,
+        "errors": [
+          {
+            "code": "DURATION",
+            "detail": "T1 時長不符需求"
+          }
+        ]
+      },
+      "next": "REVISE_DRAFT",
+      "repair_round": 0
+    },
+    {
+      "id": "coverage",
+      "title": "遺漏一項任務",
+      "description": "移除 T3 不算排好全部任務。",
+      "spec": {
+        "label": "自編排程情境，非使用者真實行事曆",
+        "timezone": "Asia/Taipei",
+        "day": "教學日 D1",
+        "window": {
+          "start": "15:00",
+          "end": "21:00"
+        },
+        "fixed": [
+          {
+            "id": "F1",
+            "title": "固定工作",
+            "start": "15:00",
+            "end": "16:00"
+          },
+          {
+            "id": "F2",
+            "title": "固定課程",
+            "start": "18:00",
+            "end": "19:00"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T1",
+            "title": "完成報告",
+            "duration_min": 90,
+            "due": "18:00"
+          },
+          {
+            "id": "T2",
+            "title": "AI 練習",
+            "duration_min": 60,
+            "due": "21:00"
+          },
+          {
+            "id": "T3",
+            "title": "課程複習",
+            "duration_min": 30,
+            "due": "21:00"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "F1",
+          "title": "固定工作",
+          "start": "15:00",
+          "end": "16:00"
+        },
+        {
+          "id": "F2",
+          "title": "固定課程",
+          "start": "18:00",
+          "end": "19:00"
+        },
+        {
+          "id": "T1",
+          "title": "完成報告",
+          "start": "16:00",
+          "end": "17:30"
+        },
+        {
+          "id": "T2",
+          "title": "AI 練習",
+          "start": "19:00",
+          "end": "20:00"
+        }
+      ],
+      "observed": {
+        "status": "INVALID_DRAFT",
+        "passed": false,
+        "errors": [
+          {
+            "code": "COVERAGE",
+            "detail": "T3 必須恰好出現一次"
+          }
+        ]
+      },
+      "next": "REVISE_DRAFT",
+      "repair_round": 0
+    },
+    {
+      "id": "fixed",
+      "title": "改動固定事件",
+      "description": "把固定工作提早結束，不能當作合法修正。",
+      "spec": {
+        "label": "自編排程情境，非使用者真實行事曆",
+        "timezone": "Asia/Taipei",
+        "day": "教學日 D1",
+        "window": {
+          "start": "15:00",
+          "end": "21:00"
+        },
+        "fixed": [
+          {
+            "id": "F1",
+            "title": "固定工作",
+            "start": "15:00",
+            "end": "16:00"
+          },
+          {
+            "id": "F2",
+            "title": "固定課程",
+            "start": "18:00",
+            "end": "19:00"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T1",
+            "title": "完成報告",
+            "duration_min": 90,
+            "due": "18:00"
+          },
+          {
+            "id": "T2",
+            "title": "AI 練習",
+            "duration_min": 60,
+            "due": "21:00"
+          },
+          {
+            "id": "T3",
+            "title": "課程複習",
+            "duration_min": 30,
+            "due": "21:00"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "F1",
+          "title": "固定工作",
+          "start": "15:00",
+          "end": "15:30"
+        },
+        {
+          "id": "F2",
+          "title": "固定課程",
+          "start": "18:00",
+          "end": "19:00"
+        },
+        {
+          "id": "T1",
+          "title": "完成報告",
+          "start": "16:00",
+          "end": "17:30"
+        },
+        {
+          "id": "T2",
+          "title": "AI 練習",
+          "start": "19:00",
+          "end": "20:00"
+        },
+        {
+          "id": "T3",
+          "title": "課程複習",
+          "start": "20:00",
+          "end": "20:30"
+        }
+      ],
+      "observed": {
+        "status": "INVALID_DRAFT",
+        "passed": false,
+        "errors": [
+          {
+            "code": "FIXED_CHANGED",
+            "detail": "F1 固定工作／課程不可移動"
+          }
+        ]
+      },
+      "next": "REVISE_DRAFT",
+      "repair_round": 0
+    },
+    {
+      "id": "limit",
+      "title": "三輪仍失敗",
+      "description": "沿用衝突草稿，修正輪數到三即停止回報。",
+      "spec": {
+        "label": "自編排程情境，非使用者真實行事曆",
+        "timezone": "Asia/Taipei",
+        "day": "教學日 D1",
+        "window": {
+          "start": "15:00",
+          "end": "21:00"
+        },
+        "fixed": [
+          {
+            "id": "F1",
+            "title": "固定工作",
+            "start": "15:00",
+            "end": "16:00"
+          },
+          {
+            "id": "F2",
+            "title": "固定課程",
+            "start": "18:00",
+            "end": "19:00"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "T1",
+            "title": "完成報告",
+            "duration_min": 90,
+            "due": "18:00"
+          },
+          {
+            "id": "T2",
+            "title": "AI 練習",
+            "duration_min": 60,
+            "due": "21:00"
+          },
+          {
+            "id": "T3",
+            "title": "課程複習",
+            "duration_min": 30,
+            "due": "21:00"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "F1",
+          "title": "固定工作",
+          "start": "15:00",
+          "end": "16:00"
+        },
+        {
+          "id": "F2",
+          "title": "固定課程",
+          "start": "18:00",
+          "end": "19:00"
+        },
+        {
+          "id": "T1",
+          "title": "完成報告",
+          "start": "15:30",
+          "end": "17:00"
+        },
+        {
+          "id": "T2",
+          "title": "AI 練習",
+          "start": "19:00",
+          "end": "20:00"
+        },
+        {
+          "id": "T3",
+          "title": "課程複習",
+          "start": "20:00",
+          "end": "20:30"
+        }
+      ],
+      "observed": {
+        "status": "INVALID_DRAFT",
+        "passed": false,
+        "errors": [
+          {
+            "code": "OVERLAP",
+            "detail": "F1 與 T1 時段重疊"
+          }
+        ]
+      },
+      "next": "STOP_LIMIT",
+      "repair_round": 3
+    }
+  ],
+  "case_count": 8,
+  "expected_results_match": true,
+  "repair": {
+    "changed": [
+      "T1"
+    ],
+    "unchanged": [
+      "F1",
+      "F2",
+      "T2",
+      "T3"
+    ]
+  },
+  "scope": "One illustrative day; no priority optimization, cross-day travel constraints, or external calendar writes",
+  "validator_sha256": "6a3682fa432255f32a80d4cff8ad8417ea5070b01334bd3fbd8aa6718a3b2a61"
+}

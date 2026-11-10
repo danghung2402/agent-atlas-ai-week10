@@ -27,6 +27,7 @@ AgentBench 提醒長程決策與指令遵循可能失敗；WebArena 提醒要核
 - [S05｜WebArena](webarena-paper.md)
 - [成果驗收：以狀態和證據判斷完成](evaluation.md)
 - [工具呼叫：名稱、參數、結果](tool-use.md)
+- [案例：工作與課業排程助手](schedule-case.md)
 
 ## 反向連結
 
@@ -34,3 +35,4 @@ AgentBench 提醒長程決策與指令遵循可能失敗；WebArena 提醒要核
 - [S05｜WebArena](webarena-paper.md)
 - [工具呼叫：名稱、參數、結果](tool-use.md)
 - [成果驗收：以狀態和證據判斷完成](evaluation.md)
+- [案例：工作與課業排程助手](schedule-case.md)

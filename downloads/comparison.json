@@ -1,0 +1,73 @@
+[
+  {
+    "source": "S01",
+    "name": "ReAct",
+    "layer": "互動機制",
+    "mechanism": "在主要提示設定中交錯推理、動作、觀察；另有微調分析",
+    "what_changes": "當前上下文／後續決策；依所選設定可能另訓練",
+    "evidence": [
+      "C01",
+      "C02",
+      "C10",
+      "C16"
+    ],
+    "limit": "可能重複與檢索失敗；不是有 loop 就成功",
+    "use": "讀取排程檢查結果後再決定修正位置"
+  },
+  {
+    "source": "S02",
+    "name": "Toolformer",
+    "layer": "工具學習",
+    "mechanism": "生成、執行、篩選 API 訓練資料，再微調",
+    "what_changes": "模型權重；推論時加入工具結果",
+    "evidence": [
+      "C03",
+      "C04",
+      "C11"
+    ],
+    "limit": "該評估每輸入至多一次 API；不等於多步驟日曆代理",
+    "use": "明確區分工具名稱、時間參數與回傳狀態"
+  },
+  {
+    "source": "S03",
+    "name": "Reflexion",
+    "layer": "回饋與記憶",
+    "mechanism": "Actor、Evaluator、Self-Reflection 角色分工",
+    "what_changes": "文字反思與情節記憶；此機制不更新權重",
+    "evidence": [
+      "C05",
+      "C12",
+      "C13"
+    ],
+    "limit": "依賴回饋品質，沒有形式成功保證",
+    "use": "記錄衝突原因與可執行修正，再次檢查"
+  },
+  {
+    "source": "S04",
+    "name": "AgentBench",
+    "layer": "評量框架",
+    "mechanism": "跨互動環境觀察多輪決策與結束原因",
+    "what_changes": "評量狀態與失敗分類；不是生成演算法",
+    "evidence": [
+      "C06",
+      "C07",
+      "C14"
+    ],
+    "limit": "正常結束仍需驗收；不同環境指標不可亂排名",
+    "use": "分清缺資料、無效草稿、達上限與驗收通過"
+  },
+  {
+    "source": "S05",
+    "name": "WebArena",
+    "layer": "網站評量環境",
+    "mechanism": "可部署網站、任務與功能結果檢查",
+    "what_changes": "網站狀態／答案依任務驗收",
+    "evidence": [
+      "C08",
+      "C09",
+      "C15"
+    ],
+    "limit": "特定可重現環境與歷史模型，不代表任意真實網站",
+    "use": "檢查事件與期限，不以流暢文字當完成證明"
+  }
+]

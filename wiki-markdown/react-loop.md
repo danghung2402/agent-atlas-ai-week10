@@ -30,8 +30,10 @@ ReAct 讓語言推理與動作交錯進行，並用環境回傳的觀察更新�
 - [AI Agent 的基本組件](agent-basics.md)
 - [回饋與記憶：把錯誤變成可用資訊](feedback-memory.md)
 - [S01｜ReAct](react-paper.md)
+- [案例：工作與課業排程助手](schedule-case.md)
 
 ## 反向連結
 
 - [S01｜ReAct](react-paper.md)
 - [AI Agent 的基本組件](agent-basics.md)
+- [案例：工作與課業排程助手](schedule-case.md)

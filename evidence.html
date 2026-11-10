@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="用五篇研究與可追溯 Wiki，理解 AI Agents 的行動、工具、回饋與成果驗收。"><title>實際執行紀錄與反思｜Agent Atlas</title><link rel="icon" href="assets/favicon.svg?v=2"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/notebook.css?v=2"></head><body class="notebook"><a class="skip" href="#main">跳到主要內容</a><aside class="rail" id="site-rail"><a class="rail-brand" href="index.html"><span class="rail-symbol">A<span>↗</span></span><span>AGENT<br>ATLAS<small>RESEARCH NOTEBOOK</small></span></a><button class="rail-toggle" aria-expanded="false" aria-controls="rail-links">目錄 ＋</button><nav class="rail-links" id="rail-links" aria-label="主要導覽"><a href="index.html"><span>00</span>研究導讀<b aria-hidden="true">↗</b></a><a href="wiki.html"><span>01</span>知識 Wiki<b aria-hidden="true">↗</b></a><a href="deck.html"><span>02</span>教學簡報<b aria-hidden="true">↗</b></a><a href="workflow.html"><span>03</span>流程設計<b aria-hidden="true">↗</b></a><a href="evidence.html" aria-current="page"><span>04</span>執行紀錄<b aria-hidden="true">↗</b></a><a href="sources.html"><span>05</span>研究來源<b aria-hidden="true">↗</b></a></nav><div class="rail-bottom"><span class="rail-chapter">FIELD NOTES / 10</span><p>從一個目標，<br>到可被檢查的成果。</p><div class="rail-counts"><span>05<small>研究</small></span><span>12<small>筆記</small></span><span>14<small>簡報</small></span></div></div></aside><div class="notebook-top"><span>AI AGENTS / 研究手記</span><span>LLM WIKI × WORKFLOW <b>2026</b></span></div><main id="main" class="wrap"><div class="page-head"><div class="eyebrow">RUN LOG & REFLECTION</div><h1>做完，不只是一句話。</h1><p>程式結果、AI 語意核對與瀏覽器操作分開記錄。以下只呈現本次實際執行留下的證據。</p></div><div class="status">程式結構檢查：通過</div><div class="proof-grid"><div><strong>5</strong><span>有效來源</span></div><div><strong>12</strong><span>Wiki 筆記</span></div><div><strong>14</strong><span>教學頁面</span></div><div><strong>484</strong><span>內部參照</span></div></div><section class="section"><h2>執行與產出</h2><div class="timeline"><article><h3>01 / 先討論，再選題</h3><p>使用者委託 AI 選題，並提出偏好修正，最後採用 AI Agents；同意公開網站。完整需求紀錄區分使用者決定與 AI 預設，沒有補造逐題訪談。</p></article><article><h3>02 / Ingest 五篇固定版本來源</h3><p>下載五份原始 PDF，擷取文字並記錄版本、頁數、取得時間、SHA-256。每篇來源有獨立筆記，再連結為概念與問答。</p></article><article><h3>03 / 查詢與逐頁稿</h3><p>以三個教學問題在 Wiki 選頁，整理九張可定位證據卡，再形成十四頁逐頁稿。HTML 只渲染已保存文字，不在排版時新增研究結論。</p></article><article><h3>04 / 來源核對與驗收</h3><p>結構由腳本檢查；AI 在本對話對照固定版本 PDF 核對核心語意；瀏覽器操作另列實測。沒有把同一對話核對寫成獨立新對話審查。</p></article></div></section><section class="section"><h2>實際發現與修正</h2><div class="table-wrap"><table><thead><tr><th>問題</th><th>觀察／證據</th><th>修正與退回位置</th></tr></thead><tbody><tr><td>短視窗與焦點下的鍵盤導覽問題</td><td>初次瀏覽器實測，在實際 CSS 視窗 1067×667 時，第 4 頁需多捲動 15px、第 12 頁需 63px；焦點在『上一頁』按鈕時按左鍵仍停在 14/14。</td><td>只回渲染節點加入短視窗精簡樣式；允許按鈕焦點下的方向鍵換頁，保留選單與表單的原生按鍵。修正後重新量測與操作。</td></tr><tr><td>來源文字擷取存在編碼雜訊</td><td>實際讀取 S01 PDF p.2 時，Figure 1 的部分文字成為編碼字元；p.3 §2 的正文可讀。</td><td>證據卡改以可讀正文定位，Wiki 記錄擷取限制。將『確認可讀與頁碼』放進證據抽取節點。</td></tr><tr><td>第一版結構檢查未全過</td><td>evidence/checks-round1.json 保存第一次 663 項檢查；發現 deck 的 N/A 殘留文字，以及 CSS 的空白 import URL。</td><td>只回渲染節點移除殘留文字與無效 import，保留 Wiki 與逐頁稿；重新 build 和 check，不重寫內容。</td></tr><tr><td>檢查器誤判歷史修正紀錄</td><td>第二次執行時，evidence 頁引用先前 N/A 問題的文字，被通用殘留文字規則誤判為尚未修復。原始報告保存於 checks-round2.json。</td><td>將殘留文字檢查限定於教學簡報；歷史紀錄仍完整保存。此修正改驗收規則的適用範圍，未刪除失敗證據。</td></tr><tr><td>書目年份容易被當成讀取版本年份</td><td>S04 書目年份為會議年份 2024，實際讀取的固定版本 v2 日期為 2023-10-25。</td><td>在來源頁與 S04 筆記同時標示書目與版本，禁止把這份歷史研究當成即時排行榜。</td></tr></tbody></table></div></section><section class="section"><h2>依使用者回饋修訂視覺</h2><p>使用者指出初版與第九週外觀相近，因而改採研究手記：深色側邊目錄、藍橘配色、中心任務圖，以及線性的 Wiki 與研究索引。修改針對版型；五份來源、主張、Wiki、逐頁稿及查詢資料經 JSON 內容比對一致。</p><p>研究手記改版後：1280×800 與 1067×667 的十四頁簡報均完整顯示；390×844 的主要頁面及十四頁簡報無水平溢出。實測側邊目錄、手機展開目錄、任務圖連結、Wiki 搜尋與篩選、測驗重試、講者筆記及方向鍵。</p><details><summary>新版瀏覽器量測與操作紀錄</summary><pre>{
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="用五篇研究與可追溯 Wiki，理解 AI Agents 的行動、工具、回饋與成果驗收。"><title>實際執行紀錄與反思｜Agent Atlas</title><link rel="icon" href="assets/favicon.svg?v=2"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/notebook.css?v=2"><link rel="stylesheet" href="assets/learning.css?v=3"></head><body class="notebook"><a class="skip" href="#main">跳到主要內容</a><aside class="rail" id="site-rail"><a class="rail-brand" href="index.html"><span class="rail-symbol">A<span>↗</span></span><span>AGENT<br>ATLAS<small>RESEARCH NOTEBOOK</small></span></a><button class="rail-toggle" aria-expanded="false" aria-controls="rail-links">目錄 ＋</button><nav class="rail-links" id="rail-links" aria-label="主要導覽"><a href="index.html"><span>00</span>研究導讀<b aria-hidden="true">↗</b></a><a href="wiki.html"><span>01</span>知識 Wiki<b aria-hidden="true">↗</b></a><a href="deck.html"><span>02</span>教學簡報<b aria-hidden="true">↗</b></a><a href="workflow.html"><span>03</span>流程設計<b aria-hidden="true">↗</b></a><a href="evidence.html" aria-current="page"><span>04</span>執行紀錄<b aria-hidden="true">↗</b></a><a href="sources.html"><span>05</span>研究來源<b aria-hidden="true">↗</b></a><a href="schedule.html"><span>06</span>排程實驗<b aria-hidden="true">↗</b></a></nav><div class="rail-bottom"><span class="rail-chapter">FIELD NOTES / 10</span><p>從一個目標，<br>到可被檢查的成果。</p><div class="rail-counts"><span>05<small>研究</small></span><span>13<small>筆記</small></span><span>14<small>簡報</small></span></div></div></aside><div class="notebook-top"><span>AI AGENTS / 研究手記</span><span>LLM WIKI × WORKFLOW <b>2026</b></span></div><main id="main" class="wrap"><div class="page-head"><div class="eyebrow">RUN LOG & REFLECTION</div><h1>做完，不只是一句話。</h1><p>程式結果、AI 語意核對與瀏覽器操作分開記錄。以下只呈現本次實際執行留下的證據。</p></div><div class="status">程式結構檢查：通過</div><div class="proof-grid"><div><strong>5</strong><span>有效來源</span></div><div><strong>13</strong><span>Wiki 筆記</span></div><div><strong>14</strong><span>教學頁面</span></div><div><strong>643</strong><span>內部參照</span></div></div><section class="section"><h2>執行與產出</h2><div class="timeline"><article><h3>01 / 討論與需求修訂</h3><p>初版先以短討論選題；2026-11-11 使用者選定「工作與課業排程」作為加強情境。後續修訂照實記錄，沒有倒填成初版前的完整訪談。</p></article><article><h3>02 / Ingest 與跨文獻比較</h3><p>五份固定 PDF 保存版本與雜湊。加強版有十三篇 Wiki、十六張證據卡，來源頁補方法與限制，再以五篇比較表分清機制和評量層次。</p></article><article><h3>03 / Wiki → 逐頁稿</h3><p>以四個教學問題選頁，排程情境貫穿十四頁簡報。HTML 只渲染已保存文字，論文觀點、自編情境與實際執行紀錄分開標示。</p></article><article><h3>04 / 分層驗證</h3><p>程式檢查引用與檔案；另有新上下文 AI 對原文做語意複核，以及八個排程案例的固定規則重跑。瀏覽器互動另外實測；各種檢查不互相冒充。</p></article></div></section><section class="section"><h2>新上下文 AI 原文複核</h2><div class="review-meta"><p>另一個未取得本對話歷史的 AI reviewer 讀取四份內容資料與固定版本 PDF，逐項複核十六張證據卡、五篇比較、十三篇 Wiki 與十四頁逐頁稿。</p><p>初次指出 C15 的定位詞位於前一頁；作者改為該頁的 CAPTCHAs 後，由 reviewer 重讀確認。最終結果為 pass，未留下待修內容問題。</p><p>此為同模型家族的新上下文複核，不是外部人工審查，也沒有替排程程式或 UI 背書。輸入雜湊與逐項結果可下載。</p></div><div class="actions"><a class="btn" href="downloads/independent-review.json">原始複核報告 ↓</a><a class="btn" href="wiki/methods-are-different.html#comparison">跨文獻比較 ↗</a></div></section><section class="section"><h2>排程案例的實際執行</h2><p>使用者選定排程情境後，作者建立自編固定資料與八個故障注入案例。檢查器實際執行，八個預期結果皆一致：衝突草稿被擋、只移動 T1 後通過、缺資料要求補充，逾期、時長不足、漏任務、改固定事件都被擋；三輪上限回報停止。這證明列明規則在這組案例的行為，不是 AI 模型通用成功率。</p><div class="table-wrap"><table><thead><tr><th>案例</th><th>觀察狀態</th><th>下一步</th></tr></thead><tbody><tr><td>初始衝突草稿</td><td>INVALID_DRAFT</td><td>REVISE_DRAFT</td></tr><tr><td>局部修正版</td><td>PASS</td><td>READY_FOR_HUMAN</td></tr><tr><td>缺少時長</td><td>NEEDS_INPUT</td><td>ASK_USER</td></tr><tr><td>沒有重疊，卻逾期</td><td>INVALID_DRAFT</td><td>REVISE_DRAFT</td></tr><tr><td>縮短任務的假修正</td><td>INVALID_DRAFT</td><td>REVISE_DRAFT</td></tr><tr><td>遺漏一項任務</td><td>INVALID_DRAFT</td><td>REVISE_DRAFT</td></tr><tr><td>改動固定事件</td><td>INVALID_DRAFT</td><td>REVISE_DRAFT</td></tr><tr><td>三輪仍失敗</td><td>INVALID_DRAFT</td><td>STOP_LIMIT</td></tr></tbody></table></div><div class="actions"><a class="btn primary" href="schedule.html">操作排程實驗 ↗</a><a class="btn" href="downloads/schedule-run.json">原始輸入與執行結果 ↓</a></div></section><section class="section"><h2>實際發現與修正</h2><div class="table-wrap"><table><thead><tr><th>問題</th><th>觀察／證據</th><th>修正與退回位置</th></tr></thead><tbody><tr><td>短視窗與焦點下的鍵盤導覽問題</td><td>初次瀏覽器實測，在實際 CSS 視窗 1067×667 時，第 4 頁需多捲動 15px、第 12 頁需 63px；焦點在『上一頁』按鈕時按左鍵仍停在 14/14。</td><td>只回渲染節點加入短視窗精簡樣式；允許按鈕焦點下的方向鍵換頁，保留選單與表單的原生按鍵。修正後重新量測與操作。</td></tr><tr><td>來源文字擷取存在編碼雜訊</td><td>實際讀取 S01 PDF p.2 時，Figure 1 的部分文字成為編碼字元；p.3 §2 的正文可讀。</td><td>證據卡改以可讀正文定位，Wiki 記錄擷取限制。將『確認可讀與頁碼』放進證據抽取節點。</td></tr><tr><td>第一版結構檢查未全過</td><td>evidence/checks-round1.json 保存第一次 663 項檢查；發現 deck 的 N/A 殘留文字，以及 CSS 的空白 import URL。</td><td>只回渲染節點移除殘留文字與無效 import，保留 Wiki 與逐頁稿；重新 build 和 check，不重寫內容。</td></tr><tr><td>檢查器誤判歷史修正紀錄</td><td>第二次執行時，evidence 頁引用先前 N/A 問題的文字，被通用殘留文字規則誤判為尚未修復。原始報告保存於 checks-round2.json。</td><td>將殘留文字檢查限定於教學簡報；歷史紀錄仍完整保存。此修正改驗收規則的適用範圍，未刪除失敗證據。</td></tr><tr><td>書目年份容易被當成讀取版本年份</td><td>S04 書目年份為會議年份 2024，實際讀取的固定版本 v2 日期為 2023-10-25。</td><td>在來源頁與 S04 筆記同時標示書目與版本，禁止把這份歷史研究當成即時排行榜。</td></tr></tbody></table></div></section><section class="section"><h2>依使用者回饋修訂視覺</h2><p>使用者指出初版與第九週外觀相近，因而改採研究手記：深色側邊目錄、藍橘配色、中心任務圖，以及線性的 Wiki 與研究索引。修改針對版型；五份來源、主張、Wiki、逐頁稿及查詢資料經 JSON 內容比對一致。</p><p>研究手記改版後：1280×800 與 1067×667 的十四頁簡報均完整顯示；390×844 的主要頁面及十四頁簡報無水平溢出。實測側邊目錄、手機展開目錄、任務圖連結、Wiki 搜尋與篩選、測驗重試、講者筆記及方向鍵。</p><details><summary>新版瀏覽器量測與操作紀錄</summary><pre>{
   &quot;date&quot;: &quot;2026-11-10&quot;,
   &quot;summary&quot;: &quot;研究手記改版後：1280×800 與 1067×667 的十四頁簡報均完整顯示；390×844 的主要頁面及十四頁簡報無水平溢出。實測側邊目錄、手機展開目錄、任務圖連結、Wiki 搜尋與篩選、測驗重試、講者筆記及方向鍵。&quot;,
   &quot;checks&quot;: [
@@ -391,19 +391,22 @@
     }
   ],
   &quot;limits&quot;: &quot;Narrow screens allow vertical scrolling. No independent model review or paper benchmark rerun was needed for this visual revision.&quot;
-}</pre></details></section><section class="section"><h2>哪一關最容易出錯？</h2><p>最需要注意的是「證據卡 → 逐頁稿」。多篇文章都談工具與回饋，很容易把提示方法、模型微調和文字記憶寫成同一種機制。另一個風險是只抄成功率，漏掉模型、任務、版本與指標條件。</p><h2>如何把檢查往前移？</h2><p>在寫逐頁稿前先建立帶 PDF 頁碼、章節與定位詞的證據卡；把方法差異和歷史數字的條件一起放進 Wiki。如此排版階段只處理顯示問題，減少從最後一頁整份重來。</p><h2>有沒有調整 workflow / graph？</h2><p>本次將原先一般性的「檢查內容」細分為證據核對、覆蓋關卡、逐頁引用與瀏覽器檢查。實際觀察到的問題與修正列在上表；沒有宣稱曾完整執行另一套大型系統後再作比較。這些節點讓內容錯誤和顯示錯誤能退回不同位置。</p></section><section class="section"><h2>瀏覽器實測</h2><p>實際操作 Wiki 搜尋／篩選／無結果提示、簡報選頁與鍵盤、三題測驗錯答重試、講者筆記。修正後 1067×667 的 14 頁可完整顯示；390×844 手機畫面無水平溢出，長頁允許垂直捲動。</p><div class="table-wrap"><table><thead><tr><th>操作</th><th>觀察結果</th></tr></thead><tbody><tr><td>Wiki 搜尋 Reflexion</td><td>顯示 2 / 12 篇</td></tr><tr><td>搜尋＋來源篩選</td><td>顯示 1 / 12 篇</td></tr><tr><td>無結果搜尋</td><td>沒有符合的筆記。可清除關鍵字，或改選「全部」。</td></tr><tr><td>清除搜尋並保留來源篩選</td><td>顯示 5 / 12 篇</td></tr><tr><td>測驗錯誤選項</td><td>再想一想，可以重新選擇。</td></tr><tr><td>測驗重試正確選項</td><td>答對了。檢查實際檔案與內容，才能支持完成的判斷。</td></tr><tr><td>三題測驗正確回饋</td><td>答對了。檢查實際檔案與內容，才能支持完成的判斷。 / 答對了。其機制以文字記憶影響下一次嘗試，不更新模型權重。 / 答對了。依實際觀察調整動作，避免把錯誤一路傳下去。</td></tr><tr><td>顯示講者筆記</td><td>測驗是固定答案的教學互動，可重試，不是模型評測或 AI 自動評分。</td></tr><tr><td>修正後，按鈕焦點按左方向鍵</td><td>13 / 14</td></tr><tr><td>手機測驗</td><td>答對了。檢查實際檔案與內容，才能支持完成的判斷。</td></tr></tbody></table></div></section><details><summary>程式檢查原始報告</summary><pre>{
-  &quot;timestamp_utc&quot;: &quot;2026-11-10T15:43:10.528018+00:00&quot;,
+}</pre></details></section><section class="section"><h2>哪一關最容易出錯？</h2><p>最需要注意的是「證據卡 → 逐頁稿」。多篇文章都談工具與回饋，很容易把提示方法、模型微調和文字記憶寫成同一種機制。另一個風險是只抄成功率，漏掉模型、任務、版本與指標條件。</p><h2>如何把檢查往前移？</h2><p>在寫逐頁稿前先建立帶 PDF 頁碼、章節與定位詞的證據卡；把方法差異和歷史數字的條件一起放進 Wiki。如此排版階段只處理顯示問題，減少從最後一頁整份重來。</p><h2>有沒有調整 workflow / graph？</h2><p>本次將原先一般性的「檢查內容」細分為證據核對、覆蓋關卡、逐頁引用與瀏覽器檢查。實際觀察到的問題與修正列在上表；沒有宣稱曾完整執行另一套大型系統後再作比較。這些節點讓內容錯誤和顯示錯誤能退回不同位置。</p></section><section class="section"><h2>前版瀏覽器實測（2026-11-10）</h2><p>以下操作屬於內容加強前的版本；不自動代表新增排程頁或已變更的投影片也已實測。</p><p>實際操作 Wiki 搜尋／篩選／無結果提示、簡報選頁與鍵盤、三題測驗錯答重試、講者筆記。修正後 1067×667 的 14 頁可完整顯示；390×844 手機畫面無水平溢出，長頁允許垂直捲動。</p><div class="table-wrap"><table><thead><tr><th>操作</th><th>觀察結果</th></tr></thead><tbody><tr><td>Wiki 搜尋 Reflexion</td><td>顯示 2 / 12 篇</td></tr><tr><td>搜尋＋來源篩選</td><td>顯示 1 / 12 篇</td></tr><tr><td>無結果搜尋</td><td>沒有符合的筆記。可清除關鍵字，或改選「全部」。</td></tr><tr><td>清除搜尋並保留來源篩選</td><td>顯示 5 / 12 篇</td></tr><tr><td>測驗錯誤選項</td><td>再想一想，可以重新選擇。</td></tr><tr><td>測驗重試正確選項</td><td>答對了。檢查實際檔案與內容，才能支持完成的判斷。</td></tr><tr><td>三題測驗正確回饋</td><td>答對了。檢查實際檔案與內容，才能支持完成的判斷。 / 答對了。其機制以文字記憶影響下一次嘗試，不更新模型權重。 / 答對了。依實際觀察調整動作，避免把錯誤一路傳下去。</td></tr><tr><td>顯示講者筆記</td><td>測驗是固定答案的教學互動，可重試，不是模型評測或 AI 自動評分。</td></tr><tr><td>修正後，按鈕焦點按左方向鍵</td><td>13 / 14</td></tr><tr><td>手機測驗</td><td>答對了。檢查實際檔案與內容，才能支持完成的判斷。</td></tr></tbody></table></div></section><section class="section"><h2>本次修訂的驗證範圍</h2><div class="callout"><p>Work 設定目前停用本機瀏覽器控制，故本次新增排程頁及變更投影片尚未完成視覺／互動實測。已完成 Python 八案例重跑、Node 同八案例一致性與三個邊界檢查、HTML 內容／引用檢查。這些不取代瀏覽器檢查。</p></div></section><p class="small"><a href="downloads/schedule-js-check.json">下載 JavaScript 與 Python 結果一致性報告 ↓</a></p><details><summary>程式檢查原始報告</summary><pre>{
+  &quot;timestamp_utc&quot;: &quot;2026-11-10T17:05:49.023574+00:00&quot;,
   &quot;passed&quot;: true,
   &quot;sources&quot;: 5,
-  &quot;wiki_pages&quot;: 12,
+  &quot;wiki_pages&quot;: 13,
   &quot;slides&quot;: 14,
-  &quot;html_pages&quot;: 18,
-  &quot;internal_references&quot;: 484,
+  &quot;evidence_cards&quot;: 16,
+  &quot;html_pages&quot;: 20,
+  &quot;internal_references&quot;: 643,
   &quot;source_coverage&quot;: &quot;5/5&quot;,
-  &quot;gate_checks&quot;: 711,
+  &quot;gate_checks&quot;: 980,
+  &quot;schedule_cases&quot;: 8,
+  &quot;independent_source_review&quot;: &quot;pass&quot;,
   &quot;failed&quot;: [],
-  &quot;semantic_review&quot;: &quot;Separate same-conversation source comparison; this script checks structure and locators only.&quot;,
-  &quot;browser_review&quot;: &quot;Separate browser.json; this script does not measure visual overflow.&quot;,
+  &quot;semantic_review&quot;: &quot;Fresh-context AI review in independent-review.json; this script checks locators and unchanged reviewed inputs, not semantic truth.&quot;,
+  &quot;browser_review&quot;: &quot;Separate browser-upgrade.json; this script does not measure visual overflow.&quot;,
   &quot;checks&quot;: [
     {
       &quot;check&quot;: &quot;at least five distinct primary sources&quot;,
@@ -558,7 +561,91 @@
       &quot;passed&quot;: true
     },
     {
-      &quot;check&quot;: &quot;twelve unique Wiki notes&quot;,
+      &quot;check&quot;: &quot;C10: registered source&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C10: page locator exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C10: source locator phrase found (not a semantic proof)&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C11: registered source&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C11: page locator exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C11: source locator phrase found (not a semantic proof)&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C12: registered source&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C12: page locator exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C12: source locator phrase found (not a semantic proof)&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C13: registered source&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C13: page locator exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C13: source locator phrase found (not a semantic proof)&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C14: registered source&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C14: page locator exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C14: source locator phrase found (not a semantic proof)&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C15: registered source&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C15: page locator exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C15: source locator phrase found (not a semantic proof)&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C16: registered source&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C16: page locator exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;C16: source locator phrase found (not a semantic proof)&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;thirteen unique Wiki notes&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -706,6 +793,18 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;schedule-case: valid evidence cards&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule-case: related Wiki notes exist&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule-case: Markdown output exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;Wiki query gate covers all five sources&quot;,
       &quot;passed&quot;: true
     },
@@ -782,7 +881,7 @@
       &quot;passed&quot;: true
     },
     {
-      &quot;check&quot;: &quot;quiz: valid answer for AI 說已寫好摘要，下一步？&quot;,
+      &quot;check&quot;: &quot;quiz: valid answer for 草稿與固定課程重疊，下一步？&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -790,7 +889,7 @@
       &quot;passed&quot;: true
     },
     {
-      &quot;check&quot;: &quot;quiz: valid answer for 工具回傳錯誤，應該？&quot;,
+      &quot;check&quot;: &quot;quiz: valid answer for 任務缺少所需時間，應該？&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -819,6 +918,14 @@
     },
     {
       &quot;check&quot;: &quot;index.html: declared Traditional Chinese&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html: unique HTML IDs&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html: declared Traditional Chinese&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -910,6 +1017,14 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html: unique HTML IDs&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html: declared Traditional Chinese&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\tool-use.html: unique HTML IDs&quot;,
       &quot;passed&quot;: true
     },
@@ -954,6 +1069,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;deck.html → assets/learning.css?v=3: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;deck.html → index.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -974,7 +1093,11 @@
       &quot;passed&quot;: true
     },
     {
-      &quot;check&quot;: &quot;deck.html → wiki/agent-basics.html: target exists&quot;,
+      &quot;check&quot;: &quot;deck.html → schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/schedule-case.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -986,7 +1109,11 @@
       &quot;passed&quot;: true
     },
     {
-      &quot;check&quot;: &quot;deck.html → wiki/agent-basics.html: target exists&quot;,
+      &quot;check&quot;: &quot;deck.html → schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/schedule-case.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -998,7 +1125,11 @@
       &quot;passed&quot;: true
     },
     {
-      &quot;check&quot;: &quot;deck.html → wiki/react-loop.html: target exists&quot;,
+      &quot;check&quot;: &quot;deck.html → schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/schedule-case.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1014,7 +1145,11 @@
       &quot;passed&quot;: true
     },
     {
-      &quot;check&quot;: &quot;deck.html → wiki/feedback-memory.html: target exists&quot;,
+      &quot;check&quot;: &quot;deck.html → schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/schedule-case.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1022,7 +1157,63 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;deck.html → schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/react-paper.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/reflexion-paper.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/webarena-paper.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/agentbench-paper.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;deck.html → wiki/evaluation.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/webarena-paper.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/agentbench-paper.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/webarena-paper.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/methods-are-different.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1034,27 +1225,7 @@
       &quot;passed&quot;: true
     },
     {
-      &quot;check&quot;: &quot;deck.html → wiki/webarena-paper.html: target exists&quot;,
-      &quot;passed&quot;: true
-    },
-    {
-      &quot;check&quot;: &quot;deck.html → wiki/evaluation.html: target exists&quot;,
-      &quot;passed&quot;: true
-    },
-    {
-      &quot;check&quot;: &quot;deck.html → wiki/agentbench-paper.html: target exists&quot;,
-      &quot;passed&quot;: true
-    },
-    {
-      &quot;check&quot;: &quot;deck.html → wiki/evaluation.html: target exists&quot;,
-      &quot;passed&quot;: true
-    },
-    {
-      &quot;check&quot;: &quot;deck.html → wiki/webarena-paper.html: target exists&quot;,
-      &quot;passed&quot;: true
-    },
-    {
-      &quot;check&quot;: &quot;deck.html → wiki/evaluation.html: target exists&quot;,
+      &quot;check&quot;: &quot;deck.html → wiki/reflexion-paper.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1066,7 +1237,11 @@
       &quot;passed&quot;: true
     },
     {
-      &quot;check&quot;: &quot;deck.html → wiki/when-stop.html: target exists&quot;,
+      &quot;check&quot;: &quot;deck.html → schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;deck.html → wiki/schedule-case.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1082,23 +1257,11 @@
       &quot;passed&quot;: true
     },
     {
-      &quot;check&quot;: &quot;deck.html → wiki/evaluation.html: target exists&quot;,
+      &quot;check&quot;: &quot;deck.html → schedule.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
-      &quot;check&quot;: &quot;deck.html → wiki/react-paper.html: target exists&quot;,
-      &quot;passed&quot;: true
-    },
-    {
-      &quot;check&quot;: &quot;deck.html → wiki/reflexion-paper.html: target exists&quot;,
-      &quot;passed&quot;: true
-    },
-    {
-      &quot;check&quot;: &quot;deck.html → wiki/webarena-paper.html: target exists&quot;,
-      &quot;passed&quot;: true
-    },
-    {
-      &quot;check&quot;: &quot;deck.html → wiki/agent-basics.html: target exists&quot;,
+      &quot;check&quot;: &quot;deck.html → wiki/schedule-case.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1174,6 +1337,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;evidence.html → assets/learning.css?v=3: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;evidence.html → #main: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -1210,6 +1377,34 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;evidence.html → schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;evidence.html → downloads/independent-review.json: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;evidence.html → wiki/methods-are-different.html#comparison: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;evidence.html → wiki/methods-are-different.html#comparison: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;evidence.html → schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;evidence.html → downloads/schedule-run.json: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;evidence.html → downloads/schedule-js-check.json: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;evidence.html → sources.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -1231,6 +1426,10 @@
     },
     {
       &quot;check&quot;: &quot;index.html → assets/notebook.css?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;index.html → assets/learning.css?v=3: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1270,6 +1469,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;index.html → schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;index.html → deck.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -1295,6 +1498,10 @@
     },
     {
       &quot;check&quot;: &quot;index.html → workflow.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;index.html → schedule.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1354,6 +1561,102 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;schedule.html → assets/favicon.svg?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → assets/style.css: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → assets/notebook.css?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → assets/learning.css?v=3: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → #main: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → #main: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → index.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → index.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → wiki.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → deck.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → workflow.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → evidence.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → wiki/methods-are-different.html#comparison: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → wiki/methods-are-different.html#comparison: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → wiki/schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → downloads/schedule-run.json: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → downloads/wiki-source.zip: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → assets/site.js: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → assets/schedule-data.js: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → assets/schedule-core.js: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule.html → assets/schedule.js: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;sources.html → assets/favicon.svg?v=2: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -1363,6 +1666,10 @@
     },
     {
       &quot;check&quot;: &quot;sources.html → assets/notebook.css?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;sources.html → assets/learning.css?v=3: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1399,6 +1706,10 @@
     },
     {
       &quot;check&quot;: &quot;sources.html → sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;sources.html → schedule.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1450,6 +1761,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki.html → assets/learning.css?v=3: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki.html → #main: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -1483,6 +1798,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki.html → sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki.html → schedule.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1534,6 +1853,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki.html → wiki/schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki.html → sources.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -1555,6 +1878,10 @@
     },
     {
       &quot;check&quot;: &quot;workflow.html → assets/notebook.css?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;workflow.html → assets/learning.css?v=3: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1591,6 +1918,10 @@
     },
     {
       &quot;check&quot;: &quot;workflow.html → sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;workflow.html → schedule.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1642,6 +1973,18 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;workflow.html → wiki/schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;workflow.html → wiki/methods-are-different.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;workflow.html → wiki/when-stop.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;workflow.html → evidence.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -1671,6 +2014,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\agent-basics.html → ../assets/notebook.css?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\agent-basics.html → ../assets/learning.css?v=3: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1707,6 +2054,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\agent-basics.html → ../sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\agent-basics.html → ../schedule.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1770,6 +2121,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\agent-basics.html → schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\agent-basics.html → react-paper.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -1810,6 +2165,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\agentbench-paper.html → ../assets/learning.css?v=3: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\agentbench-paper.html → #main: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -1846,6 +2205,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\agentbench-paper.html → ../schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\agentbench-paper.html → ../wiki.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -1879,6 +2242,30 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\agentbench-paper.html → #section-3: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\agentbench-paper.html → #section-4: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\agentbench-paper.html → #section-4: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\agentbench-paper.html → #section-5: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\agentbench-paper.html → #section-5: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\agentbench-paper.html → #section-6: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\agentbench-paper.html → #section-6: fragment exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -1934,6 +2321,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\evaluation.html → ../assets/learning.css?v=3: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\evaluation.html → #main: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -1967,6 +2358,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\evaluation.html → ../sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\evaluation.html → ../schedule.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2026,6 +2421,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\evaluation.html → schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\evaluation.html → agentbench-paper.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -2043,6 +2442,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\evaluation.html → when-stop.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\evaluation.html → schedule-case.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2067,6 +2470,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\feedback-memory.html → ../assets/notebook.css?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\feedback-memory.html → ../assets/learning.css?v=3: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2103,6 +2510,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\feedback-memory.html → ../sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\feedback-memory.html → ../schedule.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2162,6 +2573,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\feedback-memory.html → schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\feedback-memory.html → reflexion-paper.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -2171,6 +2586,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\feedback-memory.html → methods-are-different.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\feedback-memory.html → schedule-case.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2195,6 +2614,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\methods-are-different.html → ../assets/notebook.css?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → ../assets/learning.css?v=3: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2234,7 +2657,139 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → ../schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\methods-are-different.html → ../wiki.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → react-paper.html#evidence-C01: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → react-paper.html#evidence-C01: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → react-paper.html#evidence-C02: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → react-paper.html#evidence-C02: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → react-paper.html#evidence-C10: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → react-paper.html#evidence-C10: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → react-paper.html#evidence-C16: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → react-paper.html#evidence-C16: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → toolformer-paper.html#evidence-C03: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → toolformer-paper.html#evidence-C03: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → toolformer-paper.html#evidence-C04: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → toolformer-paper.html#evidence-C04: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → toolformer-paper.html#evidence-C11: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → toolformer-paper.html#evidence-C11: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → reflexion-paper.html#evidence-C05: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → reflexion-paper.html#evidence-C05: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → reflexion-paper.html#evidence-C12: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → reflexion-paper.html#evidence-C12: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → reflexion-paper.html#evidence-C13: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → reflexion-paper.html#evidence-C13: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → agentbench-paper.html#evidence-C06: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → agentbench-paper.html#evidence-C06: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → agentbench-paper.html#evidence-C07: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → agentbench-paper.html#evidence-C07: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → agentbench-paper.html#evidence-C14: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → agentbench-paper.html#evidence-C14: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → webarena-paper.html#evidence-C08: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → webarena-paper.html#evidence-C08: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → webarena-paper.html#evidence-C09: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → webarena-paper.html#evidence-C09: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → webarena-paper.html#evidence-C15: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → webarena-paper.html#evidence-C15: fragment exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2259,6 +2814,14 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\methods-are-different.html → #section-2: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → #section-3: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → #section-3: fragment exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2302,6 +2865,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\methods-are-different.html → schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\methods-are-different.html → ../sources.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -2323,6 +2890,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\react-loop.html → ../assets/notebook.css?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\react-loop.html → ../assets/learning.css?v=3: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2359,6 +2930,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\react-loop.html → ../sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\react-loop.html → ../schedule.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2418,11 +2993,19 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\react-loop.html → schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\react-loop.html → react-paper.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
       &quot;check&quot;: &quot;wiki\\react-loop.html → agent-basics.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\react-loop.html → schedule-case.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2447,6 +3030,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\react-paper.html → ../assets/notebook.css?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\react-paper.html → ../assets/learning.css?v=3: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2486,6 +3073,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\react-paper.html → ../schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\react-paper.html → ../wiki.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -2519,6 +3110,30 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\react-paper.html → #section-3: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\react-paper.html → #section-4: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\react-paper.html → #section-4: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\react-paper.html → #section-5: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\react-paper.html → #section-5: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\react-paper.html → #section-6: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\react-paper.html → #section-6: fragment exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2578,6 +3193,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\reflexion-paper.html → ../assets/learning.css?v=3: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\reflexion-paper.html → #main: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -2611,6 +3230,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\reflexion-paper.html → ../sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\reflexion-paper.html → ../schedule.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2650,6 +3273,30 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\reflexion-paper.html → #section-4: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\reflexion-paper.html → #section-4: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\reflexion-paper.html → #section-5: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\reflexion-paper.html → #section-5: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\reflexion-paper.html → #section-6: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\reflexion-paper.html → #section-6: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\reflexion-paper.html → #evidence: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -2686,6 +3333,186 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../assets/favicon.svg?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../assets/style.css: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../assets/notebook.css?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../assets/learning.css?v=3: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #main: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #main: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../index.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../index.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../wiki.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../deck.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../workflow.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../evidence.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../wiki.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #section-0: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #section-0: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #section-1: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #section-1: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #section-2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #section-2: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #section-3: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #section-3: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #section-4: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #section-4: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #section-5: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #section-5: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #evidence: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → #evidence: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → react-loop.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → tool-use.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → feedback-memory.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → evaluation.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → methods-are-different.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → when-stop.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → agent-basics.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → react-loop.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → tool-use.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → feedback-memory.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → evaluation.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → when-stop.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../downloads/wiki-source.zip: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\schedule-case.html → ../assets/site.js: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\tool-use.html → ../assets/favicon.svg?v=2: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -2695,6 +3522,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\tool-use.html → ../assets/notebook.css?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\tool-use.html → ../assets/learning.css?v=3: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2731,6 +3562,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\tool-use.html → ../sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\tool-use.html → ../schedule.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2782,6 +3617,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\tool-use.html → schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\tool-use.html → toolformer-paper.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -2791,6 +3630,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\tool-use.html → when-stop.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\tool-use.html → schedule-case.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2815,6 +3658,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\toolformer-paper.html → ../assets/notebook.css?v=2: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\toolformer-paper.html → ../assets/learning.css?v=3: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2854,6 +3701,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\toolformer-paper.html → ../schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\toolformer-paper.html → ../wiki.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -2887,6 +3738,30 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\toolformer-paper.html → #section-3: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\toolformer-paper.html → #section-4: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\toolformer-paper.html → #section-4: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\toolformer-paper.html → #section-5: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\toolformer-paper.html → #section-5: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\toolformer-paper.html → #section-6: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\toolformer-paper.html → #section-6: fragment exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -2938,6 +3813,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\webarena-paper.html → ../assets/learning.css?v=3: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\webarena-paper.html → #main: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -2974,6 +3853,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\webarena-paper.html → ../schedule.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\webarena-paper.html → ../wiki.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -3007,6 +3890,30 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\webarena-paper.html → #section-3: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\webarena-paper.html → #section-4: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\webarena-paper.html → #section-4: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\webarena-paper.html → #section-5: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\webarena-paper.html → #section-5: fragment exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\webarena-paper.html → #section-6: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\webarena-paper.html → #section-6: fragment exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -3058,6 +3965,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\when-stop.html → ../assets/learning.css?v=3: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\when-stop.html → #main: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -3091,6 +4002,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\when-stop.html → ../sources.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\when-stop.html → ../schedule.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -3146,6 +4061,10 @@
       &quot;passed&quot;: true
     },
     {
+      &quot;check&quot;: &quot;wiki\\when-stop.html → schedule-case.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
       &quot;check&quot;: &quot;wiki\\when-stop.html → agentbench-paper.html: target exists&quot;,
       &quot;passed&quot;: true
     },
@@ -3159,6 +4078,10 @@
     },
     {
       &quot;check&quot;: &quot;wiki\\when-stop.html → evaluation.html: target exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;wiki\\when-stop.html → schedule-case.html: target exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -3235,6 +4158,162 @@
     },
     {
       &quot;check&quot;: &quot;rendered inputs unchanged after build&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;fresh-context source review has no unresolved required changes&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: content/claims.json&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: content/wiki.json&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: content/deck.json&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: content/comparison.json&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: raw/S01.pdf&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: raw/S02.pdf&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: raw/S03.pdf&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: raw/S04.pdf&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: raw/S05.pdf&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: evidence/review-inputs/S01-selected-pages.txt&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: evidence/review-inputs/S02-selected-pages.txt&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: evidence/review-inputs/S03-selected-pages.txt&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: evidence/review-inputs/S04-selected-pages.txt&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;independent reviewed input unchanged: evidence/review-inputs/S05-selected-pages.txt&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;eight labelled schedule fixtures&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule overlap: observed report matches rerun&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule overlap: stop/return route matches&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule repaired: observed report matches rerun&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule repaired: stop/return route matches&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule missing: observed report matches rerun&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule missing: stop/return route matches&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule deadline: observed report matches rerun&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule deadline: stop/return route matches&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule duration: observed report matches rerun&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule duration: stop/return route matches&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule coverage: observed report matches rerun&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule coverage: stop/return route matches&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule fixed: observed report matches rerun&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule fixed: stop/return route matches&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule limit: observed report matches rerun&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule limit: stop/return route matches&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;schedule validator unchanged since replay&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;fault injection and local correction labelled accurately&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;S01: comparison evidence exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;S02: comparison evidence exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;S03: comparison evidence exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;S04: comparison evidence exists&quot;,
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;check&quot;: &quot;S05: comparison evidence exists&quot;,
       &quot;passed&quot;: true
     },
     {
@@ -3801,4 +4880,4 @@
       &quot;width&quot;: 1280
     }
   ]
-}</pre></details><section class="section"><h2>如何重跑？</h2><div class="command"><code>python scripts/build.py<br>python scripts/check.py</code></div><p class="small" style="margin-top:16px">來源驗證需要 Python 與 PyMuPDF。網站閱讀與 HTML 簡報不需要 API key。完整可重現程式、原始來源與私人繳交文字在離線作業包；公開下載為去除個人資料的 Wiki 原始檔。</p><div class="callout"><p><strong>驗證界線：</strong>程式檢查引用結構，不會自動證明語意。未進行模型訓練、論文效能重現、獨立 AI 盲審或學習成效實驗。最後內容仍應由學生閱讀並理解。</p></div></section></main><div class="wrap"><footer><span>Agent Atlas · 第十週 LLM Wiki × HTML 教學簡報</span><span><a href="sources.html">來源與版本</a> · <a href="downloads/wiki-source.zip">下載 Wiki 原始檔</a> · AI 協作製作</span></footer></div><script src="assets/site.js" defer></script></body></html>
+}</pre></details><section class="section"><h2>如何重跑？</h2><div class="command"><code>python scripts/run_schedule.py<br>python scripts/build.py<br>python scripts/check.py</code></div><p class="small" style="margin-top:16px">來源驗證需要 Python 與 PyMuPDF；排程驗收只用 Python 標準函式庫。網站與簡報不需要 API key。完整可重現程式、原始來源與私人繳交文字在完整作業包；公開下載提供 Wiki、比較及執行結果。</p><div class="callout"><p><strong>驗證界線：</strong>結構檢查、同對話核對、新上下文 AI 複核、固定案例重跑與瀏覽器操作各有範圍。未進行模型訓練、論文效能重現、外部人工審查或學習成效實驗。最後內容仍應由學生閱讀並理解。</p></div></section></main><div class="wrap"><footer><span>Agent Atlas · 第十週 LLM Wiki × HTML 教學簡報</span><span><a href="sources.html">來源與版本</a> · <a href="downloads/wiki-source.zip">下載 Wiki 原始檔</a> · AI 協作製作</span></footer></div><script src="assets/site.js" defer></script></body></html>

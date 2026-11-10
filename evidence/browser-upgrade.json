@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-11",
+  "browser_ui_verified": false,
+  "reason": "Cua browser tool returned: Local browser use is disabled in Work settings.",
+  "scope": "Scheduling page and changed teaching slides were not visually or interactively verified in this revision.",
+  "performed_instead": ["Python schedule validator replay", "Node pure-JavaScript parity and boundary checks", "Generated HTML reference and content checks", "Post-publication anonymous HTTP checks"],
+  "previous_browser_reports": ["browser.json", "browser-v2.json"],
+  "warning": "Prior reports apply to their earlier artifact versions, not automatically to these changed pages."
+}
