@@ -1,0 +1,3 @@
+解壓縮後，請以瀏覽器開啟 index.html。教學簡報為 deck.html。
+Sau khi giải nén, mở index.html hoặc deck.html bằng trình duyệt.
+Wiki và slide đọc được từ các tệp HTML; liên kết PDF bên ngoài cần mạng.
