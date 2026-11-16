@@ -1,0 +1,254 @@
+{
+  "timestamp_utc": "2026-11-16T08:31:26.945238+00:00",
+  "stage": "NODE 02, before authoring the scheduling-topic Wiki and slides",
+  "depends_on_rendered_html": false,
+  "passed": true,
+  "checks": [
+    {
+      "check": "five distinct registered sources",
+      "passed": true
+    },
+    {
+      "check": "S01 pinned PDF SHA-256",
+      "passed": true
+    },
+    {
+      "check": "S01 page count",
+      "passed": true
+    },
+    {
+      "check": "S02 pinned PDF SHA-256",
+      "passed": true
+    },
+    {
+      "check": "S02 page count",
+      "passed": true
+    },
+    {
+      "check": "S03 pinned PDF SHA-256",
+      "passed": true
+    },
+    {
+      "check": "S03 page count",
+      "passed": true
+    },
+    {
+      "check": "S04 pinned PDF SHA-256",
+      "passed": true
+    },
+    {
+      "check": "S04 page count",
+      "passed": true
+    },
+    {
+      "check": "S05 pinned PDF SHA-256",
+      "passed": true
+    },
+    {
+      "check": "S05 page count",
+      "passed": true
+    },
+    {
+      "check": "C01 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C01 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C01 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C02 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C02 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C02 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C03 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C03 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C03 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C04 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C04 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C04 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C05 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C05 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C05 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C06 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C06 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C06 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C07 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C07 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C07 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C08 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C08 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C08 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C09 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C09 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C09 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C10 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C10 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C10 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C11 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C11 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C11 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C12 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C12 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C12 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C13 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C13 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C13 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C14 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C14 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C14 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C15 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C15 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C15 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C16 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C16 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C16 anchor appears on cited page",
+      "passed": true
+    }
+  ],
+  "input_hashes": {
+    "requirements.md": "7b9fbfeb8cde0ea43276f34c00f130a569de5b33984960545bcb2e0ec775fb13",
+    "content/sources.json": "71fae34d20502a13b32d4dac204a8ec045d9c0164aea95c30d7dbaca66737e40",
+    "content/claims.json": "e6520a5b0fe168188f767685ae9ac8eca92945f4dceacc12f03581ec09c704c4"
+  },
+  "downstream_before_authoring": {
+    "content/wiki.json": "34ee6cf209b54a35f8fb6ed96f682e764b9926ec7b2b04929041cefc6476f0b0",
+    "content/deck.json": "bcc9d42451588427fe83d85c74a3187d4cf32e6517eb8e47c8ed38cfcf66598f"
+  },
+  "limit": "File integrity and locators only; semantic support requires a separate source review."
+}

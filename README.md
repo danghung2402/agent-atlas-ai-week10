@@ -1,36 +1,17 @@
-# Agent Atlas — AI Agents 教學作業
+# AI 如何安排課業與工作？
 
-2026-11-16 修訂快照（內容同 2026-11-11 加強版）：五篇研究、十三篇 Wiki、十六張證據卡、十四頁教學簡報。
+第十週 LLM Wiki 與教學 HTML 作業。本輪需求在改寫前已確認；固定五份研究重新核對後，改寫排程 Wiki 與十四頁教學。
 
-- [主要網站](https://danghung2402.github.io/agent-atlas-ai-week10/)
+- [主題介紹與必交內容](https://danghung2402.github.io/agent-atlas-ai-week10/)
 - [Wiki](https://danghung2402.github.io/agent-atlas-ai-week10/wiki.html)
-- [HTML 簡報](https://danghung2402.github.io/agent-atlas-ai-week10/deck.html)
-- [工作與課業排程實驗](https://danghung2402.github.io/agent-atlas-ai-week10/schedule.html)
-- [五篇研究比較](https://danghung2402.github.io/agent-atlas-ai-week10/wiki/methods-are-different.html#comparison)
-- [Markdown Wiki](wiki-markdown/index.md)
-- [離線 HTML ZIP](downloads/agent-atlas-offline.zip)
+- [教學 HTML](https://danghung2402.github.io/agent-atlas-ai-week10/deck.html)
+- [Loop / Graph](https://danghung2402.github.io/agent-atlas-ai-week10/workflow.html)
+- [實際執行與反思](https://danghung2402.github.io/agent-atlas-ai-week10/evidence.html)
 
-## 排程案例重跑
+十三篇 Wiki、十六張原文證據卡；研究提供設計與驗收觀點，不是五種排程演算法排名。日程為自編資料，AI 作者產生與修正草稿，固定程式驗收，不連接個人日曆。
 
-```text
-python scripts/run_schedule.py
-node scripts/check_schedule_js.cjs
-```
+本輪新上下文內容複核：[報告](evidence/scheduling-review.json)。早期來源關卡、查詢與生成順序見 evidence/topic-revision/。
 
-八個案例是自編故障注入與固定規則重跑。草稿與局部修正由 AI 作者撰寫，不是自主模型排程效能，也不寫入外部行事曆。
+本輪已做原文、程式、案例與 HTML 引用檢查；因 Work settings 停用本機瀏覽器，尚未重做視覺及互動驗收。沒有把舊版操作報告當作本輪通過。
 
-## 來源複核
-
-[evidence/independent-review.json](evidence/independent-review.json) 是未取得原對話歷史的新上下文 AI 複核，涵蓋十六項研究主張；同模型家族，非外部人工。
-
-## 驗證範圍
-
-Python 與 Node 的結果一致性、邊界案例及 HTML 引用已檢查。2026-11-11 當次本機瀏覽器控制停用，新增 UI 與變更投影片未實測；2026-11-16 已由 AI 以瀏覽器補測，紀錄見 [evidence/browser-v3.json](evidence/browser-v3.json)（AI 實測，非學生本人或外部人工）。舊版瀏覽器紀錄有另外標日期。
-
-2026-11-16 修訂：補做八題需求訪談（事後補充）、依實際紀錄改寫「哪一關最常出錯」的反思、修正流程頁描述。研究內容、證據卡、Wiki 與逐頁稿未變更。
-
-解壓縮離線包後，開啟 index.html 或 deck.html。內容閱讀與固定教學功能不需要 API key；外部論文 PDF 連結需要網路。
-
-Sites 舊版鏡像：https://agent-atlas-ai-week10.orangeemery1.chatgpt.site/ （目前保留第 2 版，不包含本次排程加強；主要與離線版本以本儲存庫為準。）
-
-本公開儲存庫不包含學生學號、私人繳交文字、課堂講義或憑證。
+公開儲存庫不含學號、私人繳交文字、課堂講義或憑證。舊版可由 Git 歷史查看。

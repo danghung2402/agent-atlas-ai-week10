@@ -1,0 +1,3696 @@
+{
+  "timestamp_utc": "2026-11-16T08:46:26.108456+00:00",
+  "topic": "AI 如何安排課業與工作？",
+  "passed": true,
+  "sources": 5,
+  "wiki_pages": 13,
+  "slides": 14,
+  "evidence_cards": 16,
+  "html_pages": 20,
+  "internal_references": 585,
+  "source_coverage": "5/5",
+  "gate_checks": 919,
+  "schedule_cases": 8,
+  "independent_source_review": "pass",
+  "failed": [],
+  "semantic_review": "Current scheduling-topic fresh-context review in scheduling-review.json; script checks locators and unchanged inputs, not semantic truth.",
+  "browser_review": "See evidence/topic-revision/browser.json; earlier browser reports do not verify this revision.",
+  "checks": [
+    {
+      "check": "at least five distinct primary sources",
+      "passed": true
+    },
+    {
+      "check": "S01: original PDF hash",
+      "passed": true
+    },
+    {
+      "check": "S01: PDF page count",
+      "passed": true
+    },
+    {
+      "check": "S02: original PDF hash",
+      "passed": true
+    },
+    {
+      "check": "S02: PDF page count",
+      "passed": true
+    },
+    {
+      "check": "S03: original PDF hash",
+      "passed": true
+    },
+    {
+      "check": "S03: PDF page count",
+      "passed": true
+    },
+    {
+      "check": "S04: original PDF hash",
+      "passed": true
+    },
+    {
+      "check": "S04: PDF page count",
+      "passed": true
+    },
+    {
+      "check": "S05: original PDF hash",
+      "passed": true
+    },
+    {
+      "check": "S05: PDF page count",
+      "passed": true
+    },
+    {
+      "check": "C01: registered source",
+      "passed": true
+    },
+    {
+      "check": "C01: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C01: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C02: registered source",
+      "passed": true
+    },
+    {
+      "check": "C02: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C02: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C03: registered source",
+      "passed": true
+    },
+    {
+      "check": "C03: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C03: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C04: registered source",
+      "passed": true
+    },
+    {
+      "check": "C04: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C04: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C05: registered source",
+      "passed": true
+    },
+    {
+      "check": "C05: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C05: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C06: registered source",
+      "passed": true
+    },
+    {
+      "check": "C06: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C06: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C07: registered source",
+      "passed": true
+    },
+    {
+      "check": "C07: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C07: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C08: registered source",
+      "passed": true
+    },
+    {
+      "check": "C08: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C08: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C09: registered source",
+      "passed": true
+    },
+    {
+      "check": "C09: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C09: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C10: registered source",
+      "passed": true
+    },
+    {
+      "check": "C10: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C10: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C11: registered source",
+      "passed": true
+    },
+    {
+      "check": "C11: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C11: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C12: registered source",
+      "passed": true
+    },
+    {
+      "check": "C12: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C12: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C13: registered source",
+      "passed": true
+    },
+    {
+      "check": "C13: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C13: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C14: registered source",
+      "passed": true
+    },
+    {
+      "check": "C14: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C14: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C15: registered source",
+      "passed": true
+    },
+    {
+      "check": "C15: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C15: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C16: registered source",
+      "passed": true
+    },
+    {
+      "check": "C16: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C16: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "thirteen unique Wiki notes",
+      "passed": true
+    },
+    {
+      "check": "react-paper: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "react-paper: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "react-paper: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "toolformer-paper: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "toolformer-paper: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "toolformer-paper: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "reflexion-paper: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "reflexion-paper: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "reflexion-paper: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "agentbench-paper: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "agentbench-paper: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "agentbench-paper: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "webarena-paper: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "webarena-paper: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "webarena-paper: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "agent-basics: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "agent-basics: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "agent-basics: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "react-loop: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "react-loop: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "react-loop: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "tool-use: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "tool-use: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "tool-use: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "feedback-memory: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "feedback-memory: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "feedback-memory: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "evaluation: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "evaluation: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "evaluation: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "methods-are-different: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "methods-are-different: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "methods-are-different: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "when-stop: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "when-stop: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "when-stop: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "schedule-case: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "schedule-case: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "schedule-case: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "Wiki query gate covers all five sources",
+      "passed": true
+    },
+    {
+      "check": "slides cover all five sources",
+      "passed": true
+    },
+    {
+      "check": "fourteen authored teaching slides",
+      "passed": true
+    },
+    {
+      "check": "slide 01: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 02: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 03: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 04: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 05: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 06: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 07: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 08: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 09: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 10: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 11: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 12: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 13: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "slide 14: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
+      "check": "new scheduling topic appears on cover",
+      "passed": true
+    },
+    {
+      "check": "training and memory distinction visible on slides, not only notes",
+      "passed": true
+    },
+    {
+      "check": "quiz: valid answer for T1 與固定工作衝突，下一步？",
+      "passed": true
+    },
+    {
+      "check": "quiz: valid answer for 只消除重疊，是否就通過？",
+      "passed": true
+    },
+    {
+      "check": "quiz: valid answer for 缺少任務時長，應該？",
+      "passed": true
+    },
+    {
+      "check": "deck.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "deck.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "deck.html: no placeholder copy in teaching slides",
+      "passed": true
+    },
+    {
+      "check": "evidence.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "evidence.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "index.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "index.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "schedule.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "schedule.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "sources.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "sources.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "workflow.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "workflow.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
+      "check": "deck.html → assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → schedule.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → schedule.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/react-loop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/tool-use.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/feedback-memory.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → schedule.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → schedule.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/react-loop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → assets/deck.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/requirements-confirmed.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sources-gate.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/authoring.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/query-gate.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/authoring.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/scheduling-review.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/schedule-run.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → schedule.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/schedule-run.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/schedule-js-check.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/scheduling-review.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/final-checks.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/revision-changes.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/browser-topic.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → evidence.html#reflection: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → evidence.html#reflection: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "index.html → assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → assets/schedule-data.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → assets/schedule-core.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "schedule.html → assets/schedule.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → wiki/toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → wiki/agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/react-loop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/tool-use.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/feedback-memory.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/react-loop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/tool-use.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/feedback-memory.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → react-loop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → tool-use.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → tool-use.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agentbench-paper.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → tool-use.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → react-loop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → tool-use.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → react-loop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → react-loop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → react-paper.html#evidence-C01: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → react-paper.html#evidence-C01: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → react-paper.html#evidence-C02: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → react-paper.html#evidence-C02: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → react-paper.html#evidence-C10: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → react-paper.html#evidence-C10: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → react-paper.html#evidence-C16: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → react-paper.html#evidence-C16: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → toolformer-paper.html#evidence-C03: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → toolformer-paper.html#evidence-C03: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → toolformer-paper.html#evidence-C04: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → toolformer-paper.html#evidence-C04: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → toolformer-paper.html#evidence-C11: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → toolformer-paper.html#evidence-C11: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → reflexion-paper.html#evidence-C05: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → reflexion-paper.html#evidence-C05: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → reflexion-paper.html#evidence-C12: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → reflexion-paper.html#evidence-C12: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → reflexion-paper.html#evidence-C13: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → reflexion-paper.html#evidence-C13: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → agentbench-paper.html#evidence-C06: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → agentbench-paper.html#evidence-C06: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → agentbench-paper.html#evidence-C07: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → agentbench-paper.html#evidence-C07: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → agentbench-paper.html#evidence-C14: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → agentbench-paper.html#evidence-C14: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → webarena-paper.html#evidence-C08: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → webarena-paper.html#evidence-C08: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → webarena-paper.html#evidence-C09: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → webarena-paper.html#evidence-C09: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → webarena-paper.html#evidence-C15: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → webarena-paper.html#evidence-C15: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → feedback-memory.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → feedback-memory.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-loop.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → react-loop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → react-loop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\react-paper.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → feedback-memory.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → feedback-memory.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\reflexion-paper.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../schedule.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #section-4: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #section-4: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → react-loop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → tool-use.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → feedback-memory.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → react-loop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → tool-use.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → feedback-memory.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\schedule-case.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → toolformer-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\tool-use.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → tool-use.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → tool-use.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\toolformer-paper.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → when-stop.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\webarena-paper.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → agentbench-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → feedback-memory.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\when-stop.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "CSS has no empty import URL",
+      "passed": true
+    },
+    {
+      "check": "slide 01: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 02: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 03: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 04: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 05: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 06: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 07: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 08: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 09: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 10: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 11: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 12: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 13: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "slide 14: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
+      "check": "rendered inputs unchanged after build",
+      "passed": true
+    },
+    {
+      "check": "fresh-context source review has no unresolved required changes",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: AGENTS.md",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: requirements.md",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: content/sources.json",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: content/claims.json",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: content/wiki.json",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: content/deck.json",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: content/comparison.json",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: content/queries.json",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: raw/S01.pdf",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: raw/S02.pdf",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: raw/S03.pdf",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: raw/S04.pdf",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: raw/S05.pdf",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: scripts/schedule_validator.py",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: evidence/schedule-run.json",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: evidence/topic-revision/requirements-confirmed.json",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: evidence/topic-revision/sources-gate.json",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: evidence/topic-revision/query-gate.json",
+      "passed": true
+    },
+    {
+      "check": "independent reviewed input unchanged: evidence/topic-revision/authoring.json",
+      "passed": true
+    },
+    {
+      "check": "source gate actually passed without HTML dependency",
+      "passed": true
+    },
+    {
+      "check": "early source gate inputs unchanged",
+      "passed": true
+    },
+    {
+      "check": "confirmed requirements then early source gate then Wiki then query gate then slides",
+      "passed": true
+    },
+    {
+      "check": "query coverage passed before slide authoring",
+      "passed": true
+    },
+    {
+      "check": "query gate canonical input hashes still match",
+      "passed": true
+    },
+    {
+      "check": "new Wiki and slides authored after recorded early gate",
+      "passed": true
+    },
+    {
+      "check": "authored scheduling content unchanged",
+      "passed": true
+    },
+    {
+      "check": "eight labelled schedule fixtures",
+      "passed": true
+    },
+    {
+      "check": "schedule overlap: observed report matches rerun",
+      "passed": true
+    },
+    {
+      "check": "schedule overlap: stop/return route matches",
+      "passed": true
+    },
+    {
+      "check": "schedule repaired: observed report matches rerun",
+      "passed": true
+    },
+    {
+      "check": "schedule repaired: stop/return route matches",
+      "passed": true
+    },
+    {
+      "check": "schedule missing: observed report matches rerun",
+      "passed": true
+    },
+    {
+      "check": "schedule missing: stop/return route matches",
+      "passed": true
+    },
+    {
+      "check": "schedule deadline: observed report matches rerun",
+      "passed": true
+    },
+    {
+      "check": "schedule deadline: stop/return route matches",
+      "passed": true
+    },
+    {
+      "check": "schedule duration: observed report matches rerun",
+      "passed": true
+    },
+    {
+      "check": "schedule duration: stop/return route matches",
+      "passed": true
+    },
+    {
+      "check": "schedule coverage: observed report matches rerun",
+      "passed": true
+    },
+    {
+      "check": "schedule coverage: stop/return route matches",
+      "passed": true
+    },
+    {
+      "check": "schedule fixed: observed report matches rerun",
+      "passed": true
+    },
+    {
+      "check": "schedule fixed: stop/return route matches",
+      "passed": true
+    },
+    {
+      "check": "schedule limit: observed report matches rerun",
+      "passed": true
+    },
+    {
+      "check": "schedule limit: stop/return route matches",
+      "passed": true
+    },
+    {
+      "check": "schedule validator unchanged since replay",
+      "passed": true
+    },
+    {
+      "check": "fault injection and local correction labelled accurately",
+      "passed": true
+    },
+    {
+      "check": "S01: comparison evidence exists",
+      "passed": true
+    },
+    {
+      "check": "S02: comparison evidence exists",
+      "passed": true
+    },
+    {
+      "check": "S03: comparison evidence exists",
+      "passed": true
+    },
+    {
+      "check": "S04: comparison evidence exists",
+      "passed": true
+    },
+    {
+      "check": "S05: comparison evidence exists",
+      "passed": true
+    },
+    {
+      "check": "no student ID in public website",
+      "passed": true
+    },
+    {
+      "check": "public Wiki download is a valid ZIP",
+      "passed": true
+    },
+    {
+      "check": "no student ID in public Wiki download",
+      "passed": true
+    }
+  ]
+}

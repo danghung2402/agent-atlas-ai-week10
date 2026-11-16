@@ -1,0 +1,10 @@
+{
+  "timestamp_utc": "2026-11-16T08:31:26.452635+00:00",
+  "topic": "AI 如何安排課業與工作？",
+  "user_request": "Change the topic to AI scheduling study and work; include only required assignment sections.",
+  "proposal": "Beginners; Traditional Chinese; synthetic daily schedule; AI authors/revises drafts; program validates fixed events, overlap, durations, deadlines and coverage; ask for missing data; stop after three failed repair rounds.",
+  "user_answer_original": "Dùng bộ yêu cầu trên",
+  "user_answer_translation": "使用上述需求",
+  "phase": "Saved before rewriting this revision of the Wiki and slides",
+  "requirements_sha256": "7b9fbfeb8cde0ea43276f34c00f130a569de5b33984960545bcb2e0ec775fb13"
+}

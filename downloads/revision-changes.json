@@ -1,0 +1,9 @@
+[
+  {
+    "timestamp_utc": "2026-11-16T08:44:07.386881+00:00",
+    "node": "review/build boundary",
+    "observation": "After source review, replaying the schedule updated schedule-run.json timestamp. Build stopped at the reviewed-input hash gate; downstream check then had no render manifest.",
+    "action": "Keep the old report in Git, compare old/new replay content excluding timestamp, ask the fresh-context reviewer to identify the current bytes; only rebuild after the review is refreshed.",
+    "not_a_model_failure": true
+  }
+]

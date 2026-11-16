@@ -9,7 +9,7 @@
   document.querySelector('#progress-fill').style.width=`${(current+1)/total*100}%`;
   document.querySelector('#prev').disabled=current===0;document.querySelector('#next').disabled=current===total-1;
   document.querySelector('#speaker-text').textContent=slides[current].dataset.notes;
-  select.value=String(current);document.title=`${current+1}. ${slides[current].dataset.title}｜Agent Atlas`;
+  select.value=String(current);document.title=`${current+1}. ${slides[current].dataset.title}｜AI 排程筆記`;
   if(updateHash){const nextHash=`#slide-${current+1}`;if(location.protocol==='file:')location.hash=nextHash;else history.replaceState(null,'',nextHash);}
   window.scrollTo(0,0);
  }

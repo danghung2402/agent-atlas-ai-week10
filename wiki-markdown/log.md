@@ -1,31 +1,27 @@
-# Ingest 與查詢紀錄
+# 本輪 ingest 與查詢紀錄
 
-2026-11-10 初版：取得五篇固定版本 PDF，建立來源、概念與問答。
-2026-11-11 修訂：使用者選定工作與課業排程情境，補深度比較與限制；目前十三篇 Wiki、十六張證據卡與四個教學查詢。
-2026-11-16 補充：事後補做八題需求訪談（見 requirements.md）；Wiki 內容未變更，新增規則寫入 AGENTS.md。
+本輪沿用五份已 ingest 的固定來源，主題改寫前先核對來源與十六張證據卡。需求確認、來源關卡、Wiki 改寫、四個查詢與逐頁稿依序保存於 evidence/topic-revision/。
 
-本次查詢由 AI 在 Wiki 內選取頁面與證據，不是線上搜尋介面或向量資料庫。
+## 安排前要有哪些資料？哪些時間不能改？
 
-## Agent 如何依動作結果決定下一步？
+agent-basics, schedule-case, when-stop
 
-agent-basics, react-loop, react-paper
+證據：C01, C03, C08, C13, C14
 
-證據：C01, C02, C10, C16
+## 草稿衝突時，AI 和工具各做什麼？
 
-## 工具學習和文字反思有什麼差別？
+react-loop, tool-use, feedback-memory, react-paper, toolformer-paper, reflexion-paper
 
-tool-use, feedback-memory, methods-are-different, toolformer-paper, reflexion-paper
+證據：C01, C02, C03, C04, C05, C10, C11, C12, C13, C16
 
-證據：C03, C04, C05, C11, C12, C13
+## 怎樣才算排好？何時詢問或停止？
 
-## 為什麼要驗收實際成果？
+evaluation, when-stop, agentbench-paper, webarena-paper
 
-evaluation, agentbench-paper, webarena-paper, when-stop
+證據：C06, C07, C08, C09, C13, C14, C15
 
-證據：C06, C07, C08, C09, C14, C15
+## 五篇研究各支持什麼，哪些不能外推？
 
-## 如何把觀點落實到工作與課業排程？
+methods-are-different, schedule-case
 
-schedule-case, methods-are-different, when-stop
-
-證據：C01, C04, C05, C08, C10, C11, C13, C14
+證據：C01, C04, C05, C08, C11, C13, C14, C15, C16

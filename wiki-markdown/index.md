@@ -1,17 +1,15 @@
-# Agent Atlas LLM Wiki
+# AI 排程 Wiki
 
-原始資料 → 證據卡 → 概念／問答 → 教學簡報。
-
-- [S01｜ReAct](react-paper.md)
-- [S02｜Toolformer](toolformer-paper.md)
-- [S03｜Reflexion](reflexion-paper.md)
-- [S04｜AgentBench](agentbench-paper.md)
-- [S05｜WebArena](webarena-paper.md)
-- [AI Agent 的基本組件](agent-basics.md)
-- [ReAct：每次動作後看結果](react-loop.md)
-- [工具呼叫：名稱、參數、結果](tool-use.md)
-- [回饋與記憶：把錯誤變成可用資訊](feedback-memory.md)
-- [成果驗收：以狀態和證據判斷完成](evaluation.md)
-- [ReAct、Toolformer、Reflexion 一樣嗎？](methods-are-different.md)
-- [代理何時應該停止？](when-stop.md)
-- [案例：工作與課業排程助手](schedule-case.md)
+- [S01｜ReAct：依檢查結果修正排程](react-paper.md)
+- [S02｜Toolformer：分清工具、參數與結果](toolformer-paper.md)
+- [S03｜Reflexion：保留具體修正經驗](reflexion-paper.md)
+- [S04｜AgentBench：分開結束與成功](agentbench-paper.md)
+- [S05｜WebArena：檢查實際成果](webarena-paper.md)
+- [AI 排程助手：先分清固定事件與待辦](agent-basics.md)
+- [排程循環：產生 → 檢查 → 修正](react-loop.md)
+- [排程工具：輸入、回傳與使用限制](tool-use.md)
+- [把衝突回饋變成下一輪修正](feedback-memory.md)
+- [如何驗收一份課業與工作日程](evaluation.md)
+- [五篇研究如何支援 AI 排程教學？](methods-are-different.md)
+- [排程助手何時應該停下來？](when-stop.md)
+- [一日案例：從衝突草稿到可驗收日程](schedule-case.md)

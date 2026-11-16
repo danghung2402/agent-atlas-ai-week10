@@ -1,0 +1,20 @@
+{
+  "timestamp_utc": "2026-11-16T08:35:01.871803+00:00",
+  "passed": true,
+  "stage": "Wiki query/coverage before writing slides",
+  "questions": 4,
+  "source_coverage": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05"
+  ],
+  "wiki_sha256": "2160c98cc45f7f5e58a62fcaebca0fd3eec64549829a2e720e6a2bf763220b26",
+  "queries_sha256": "67b446533593a9797d2ddb6a0c206992a37c66517bf4eb8926db342ef8121276",
+  "original_crlf_hashes": {
+    "wiki_sha256": "57cd3f88cddeb477fd3433e2d4de2f5b94822ca2b47f6df75410c38d25c6f3c8",
+    "queries_sha256": "329be32e3a551d007e202af4e6e64e9e6f9b1060347ef7acf96eba4cc7b19a3a"
+  },
+  "representation_note": "After the recorded gate, CRLF was normalized to LF without changing parsed content. Original hashes retained; this is not a second execution."
+}

@@ -1,0 +1,460 @@
+{
+  "review_date": "2026-11-16",
+  "review_completed_at_utc": "2026-11-16T08:41:16.620103+00:00",
+  "review_topic": "AI scheduling study and work / Traditional Chinese assignment revision",
+  "reviewer": {
+    "kind": "bounded fresh-context AI source-fidelity and pedagogical review",
+    "context_independence": "The reviewer received the bounded task brief and inspected workspace instructions and files. It did not author this revision and did not receive the original authoring conversation. The brief and requirements record still frame this review; it is not a blind audit.",
+    "limits": "Same model family, nonhuman reviewer. Neither external human review nor independent-model replication. No teacher grade or student-authorship determination.",
+    "conversation_limit": "The pre-revision requirement confirmation is accepted as documented in requirements.md and requirements-confirmed.json. The original conversation was not independently verified."
+  },
+  "method": {
+    "source_verification": "Computed SHA-256, byte size and page count from actual pinned PDF bytes. Read directly extracted text of all cited physical pages; support was judged by meaning, scope, setup and metric rather than anchor matching alone. No reliance on raw text files as a substitute for PDFs.",
+    "context": "Also read S05 physical page 2 for the section 2 paragraph continuing on page 3. Unicode compatibility normalization was used only for finding ligature-bearing PDF text; hashes always use unmodified actual bytes.",
+    "content_review": "Read all 16 evidence cards, 13 Wiki entries, 14 slide scripts including speaker notes, five comparison rows and four query selections. Inspected fixture arithmetic and role labels.",
+    "excluded": "No web browsing, build/check script execution, validator replay, browser testing, live model scheduling or learner study. Existing run records and timestamps do not independently establish execution."
+  },
+  "inputs_reviewed": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "4f1f4af564385b122335baef15a76affece56174dc7141fd5dbfd08a5fafade2",
+      "bytes": 4062
+    },
+    {
+      "path": "requirements.md",
+      "sha256": "7b9fbfeb8cde0ea43276f34c00f130a569de5b33984960545bcb2e0ec775fb13",
+      "bytes": 6484
+    },
+    {
+      "path": "content/sources.json",
+      "sha256": "71fae34d20502a13b32d4dac204a8ec045d9c0164aea95c30d7dbaca66737e40",
+      "bytes": 2357
+    },
+    {
+      "path": "content/claims.json",
+      "sha256": "e6520a5b0fe168188f767685ae9ac8eca92945f4dceacc12f03581ec09c704c4",
+      "bytes": 4114
+    },
+    {
+      "path": "content/wiki.json",
+      "sha256": "2160c98cc45f7f5e58a62fcaebca0fd3eec64549829a2e720e6a2bf763220b26",
+      "bytes": 18325
+    },
+    {
+      "path": "content/deck.json",
+      "sha256": "ab90d289d63cff2f9f1f03d1bf6dbd1be0ead65736828d76bf54053eb38af74e",
+      "bytes": 10642
+    },
+    {
+      "path": "content/comparison.json",
+      "sha256": "1006a6df004bd29d9e52d7754e556f44ae3cd7a7c3de3ca0fb7e9c81253de09b",
+      "bytes": 2210
+    },
+    {
+      "path": "content/queries.json",
+      "sha256": "67b446533593a9797d2ddb6a0c206992a37c66517bf4eb8926db342ef8121276",
+      "bytes": 1235
+    },
+    {
+      "path": "raw/S01.pdf",
+      "sha256": "f285b0971ae4a790e402fb93966bed3adde2cf0a04977d08b2b40d6ab0cace69",
+      "bytes": 633805
+    },
+    {
+      "path": "raw/S02.pdf",
+      "sha256": "6d7483d94653008e40c2058a1c22441c92e3713dae278b6361e8efc447c99522",
+      "bytes": 657966
+    },
+    {
+      "path": "raw/S03.pdf",
+      "sha256": "6059b6f89fea9959bd3dab553fbb97756a3dfb1b15e3cbab2fbf3ab6664333bd",
+      "bytes": 591097
+    },
+    {
+      "path": "raw/S04.pdf",
+      "sha256": "6d599fcccc36b9bbe3f7700da916fac547d14b9d94a676bc677d1851d52bf7c8",
+      "bytes": 23176585
+    },
+    {
+      "path": "raw/S05.pdf",
+      "sha256": "f9731b92bc3d29a2ea7b5f9cb46b48540c76bc3f84a57e0c48fc37ea73107f95",
+      "bytes": 9128123
+    },
+    {
+      "path": "scripts/schedule_validator.py",
+      "sha256": "6a3682fa432255f32a80d4cff8ad8417ea5070b01334bd3fbd8aa6718a3b2a61",
+      "bytes": 2948
+    },
+    {
+      "path": "evidence/schedule-run.json",
+      "sha256": "8774fd8938ebba65f15d2a1067ed715b6b6a01e8c0911fa64aaefc745775d9f3",
+      "bytes": 18358
+    },
+    {
+      "path": "evidence/topic-revision/requirements-confirmed.json",
+      "sha256": "fba7449c65c1e746410c13f6e996b31560a5b98c351336121ce6136c82fc009c",
+      "bytes": 733
+    },
+    {
+      "path": "evidence/topic-revision/sources-gate.json",
+      "sha256": "130b080a8379ddc4546298f5c9bc2159450386adb87e803196ad2430cec24ede",
+      "bytes": 5313
+    },
+    {
+      "path": "evidence/topic-revision/query-gate.json",
+      "sha256": "fb5a0172caeba4848282cf02af287bb468349c1653181fb82bd79964876fed6d",
+      "bytes": 783
+    },
+    {
+      "path": "evidence/topic-revision/authoring.json",
+      "sha256": "1fd35aef1251f0b6c732284cbfe6d0da457c4465b9c49bca64fb60e6850bf3bd",
+      "bytes": 969
+    }
+  ],
+  "source_integrity": [
+    {
+      "source": "S01",
+      "version": "2210.03629v3",
+      "path": "raw/S01.pdf",
+      "actual_sha256": "f285b0971ae4a790e402fb93966bed3adde2cf0a04977d08b2b40d6ab0cace69",
+      "registered_sha256": "f285b0971ae4a790e402fb93966bed3adde2cf0a04977d08b2b40d6ab0cace69",
+      "sha256_matches": true,
+      "actual_bytes": 633805,
+      "registered_bytes": 633805,
+      "bytes_match": true,
+      "actual_pages": 33,
+      "registered_pages": 33,
+      "pages_match": true
+    },
+    {
+      "source": "S02",
+      "version": "2302.04761v1",
+      "path": "raw/S02.pdf",
+      "actual_sha256": "6d7483d94653008e40c2058a1c22441c92e3713dae278b6361e8efc447c99522",
+      "registered_sha256": "6d7483d94653008e40c2058a1c22441c92e3713dae278b6361e8efc447c99522",
+      "sha256_matches": true,
+      "actual_bytes": 657966,
+      "registered_bytes": 657966,
+      "bytes_match": true,
+      "actual_pages": 17,
+      "registered_pages": 17,
+      "pages_match": true
+    },
+    {
+      "source": "S03",
+      "version": "2303.11366v4",
+      "path": "raw/S03.pdf",
+      "actual_sha256": "6059b6f89fea9959bd3dab553fbb97756a3dfb1b15e3cbab2fbf3ab6664333bd",
+      "registered_sha256": "6059b6f89fea9959bd3dab553fbb97756a3dfb1b15e3cbab2fbf3ab6664333bd",
+      "sha256_matches": true,
+      "actual_bytes": 591097,
+      "registered_bytes": 591097,
+      "bytes_match": true,
+      "actual_pages": 19,
+      "registered_pages": 19,
+      "pages_match": true
+    },
+    {
+      "source": "S04",
+      "version": "2308.03688v2",
+      "path": "raw/S04.pdf",
+      "actual_sha256": "6d599fcccc36b9bbe3f7700da916fac547d14b9d94a676bc677d1851d52bf7c8",
+      "registered_sha256": "6d599fcccc36b9bbe3f7700da916fac547d14b9d94a676bc677d1851d52bf7c8",
+      "sha256_matches": true,
+      "actual_bytes": 23176585,
+      "registered_bytes": 23176585,
+      "bytes_match": true,
+      "actual_pages": 55,
+      "registered_pages": 55,
+      "pages_match": true
+    },
+    {
+      "source": "S05",
+      "version": "2307.13854v4",
+      "path": "raw/S05.pdf",
+      "actual_sha256": "f9731b92bc3d29a2ea7b5f9cb46b48540c76bc3f84a57e0c48fc37ea73107f95",
+      "registered_sha256": "f9731b92bc3d29a2ea7b5f9cb46b48540c76bc3f84a57e0c48fc37ea73107f95",
+      "sha256_matches": true,
+      "actual_bytes": 9128123,
+      "registered_bytes": 9128123,
+      "bytes_match": true,
+      "actual_pages": 22,
+      "registered_pages": 22,
+      "pages_match": true
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "C01",
+      "source": "S01",
+      "physical_pdf_page": 3,
+      "section": "§2",
+      "anchor": "observation",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "Page 3 section 2 describes observation-conditioned interaction history and interleaved thought/action/observation trajectories. Scheduling is separately labeled a teaching synthesis."
+    },
+    {
+      "claim_id": "C02",
+      "source": "S01",
+      "physical_pdf_page": 3,
+      "section": "§2",
+      "anchor": "frozen",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "Page 3 explicitly limits the main setup to a frozen PaLM model prompted with few-shot examples. The claim correctly avoids treating this as every possible ReAct setup."
+    },
+    {
+      "claim_id": "C03",
+      "source": "S02",
+      "physical_pdf_page": 1,
+      "section": "Abstract",
+      "anchor": "arguments",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "The page 1 abstract explicitly lists API selection, timing, arguments, and incorporating results into future token prediction."
+    },
+    {
+      "claim_id": "C04",
+      "source": "S02",
+      "physical_pdf_page": 2,
+      "section": "§2 / Figure 2",
+      "anchor": "finetune",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "Page 2 Figure 2 and section 2 describe candidate-call sampling, execution, filtering by subsequent-token loss, retaining useful calls, and fine-tuning."
+    },
+    {
+      "claim_id": "C05",
+      "source": "S03",
+      "physical_pdf_page": 1,
+      "section": "Abstract",
+      "anchor": "weights",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "The page 1 abstract explicitly distinguishes linguistic feedback and reflective episodic memory from updating weights."
+    },
+    {
+      "claim_id": "C06",
+      "source": "S04",
+      "physical_pdf_page": 1,
+      "section": "Abstract",
+      "anchor": "8 distinct",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "The pinned v2 page 1 abstract states eight distinct environments and multi-turn reasoning and decision-making evaluation."
+    },
+    {
+      "claim_id": "C07",
+      "source": "S04",
+      "physical_pdf_page": 1,
+      "section": "Abstract",
+      "anchor": "instruction following",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "The pinned v2 page 1 abstract names poor long-term reasoning, decision-making, and instruction following as main obstacles."
+    },
+    {
+      "claim_id": "C08",
+      "source": "S05",
+      "physical_pdf_page": 6,
+      "section": "§3.2",
+      "anchor": "programmatically",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "Page 6 section 3.2 distinguishes scoring textual answers from programmatic examination of website states/content against intended outcomes."
+    },
+    {
+      "claim_id": "C09",
+      "source": "S05",
+      "physical_pdf_page": 2,
+      "section": "Introduction",
+      "anchor": "14.41%",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "Page 2 directly reports best GPT-4 agent end-to-end task success of 14.41 percent and human performance of 78.24 percent. The claim limits this to the historical pinned v4 WebArena setting rather than scheduling or current-model performance."
+    },
+    {
+      "claim_id": "C10",
+      "source": "S01",
+      "physical_pdf_page": 6,
+      "section": "§3 / Error analysis",
+      "anchor": "repetitively",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "Page 6 HotpotQA analysis explicitly describes repeated thoughts/actions, failure to escape the loop, and non-informative search results."
+    },
+    {
+      "claim_id": "C11",
+      "source": "S02",
+      "physical_pdf_page": 6,
+      "section": "§4.2 / Decoding setup",
+      "anchor": "at most one API call",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "Page 6 decoding text restricts that evaluation to at most one API call per input. The non-extrapolation to multi-step calendar agents is a valid scope warning, not a scheduling experiment result."
+    },
+    {
+      "claim_id": "C12",
+      "source": "S03",
+      "physical_pdf_page": 3,
+      "section": "§3",
+      "anchor": "three distinct models",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "Page 3 section 3 explicitly names Actor, Evaluator, and Self-Reflection models and their generation, scoring, and verbal-feedback roles. Readable body text supports this independently of garbled figure extraction."
+    },
+    {
+      "claim_id": "C13",
+      "source": "S03",
+      "physical_pdf_page": 2,
+      "section": "Introduction",
+      "anchor": "formal guarantee",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "Page 2 explicitly states reliance on self-evaluation or heuristics and absence of a formal success guarantee."
+    },
+    {
+      "claim_id": "C14",
+      "source": "S04",
+      "physical_pdf_page": 4,
+      "section": "§2 / Typical finish reasons",
+      "anchor": "Invalid Action",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "Page 4 lists CLE, IF, IA, TLE, and Complete as normal termination and separately discusses task metrics including success rate. Distinguishing termination from success is a faithful explanatory inference; project routing names are separately labeled as custom."
+    },
+    {
+      "claim_id": "C15",
+      "source": "S05",
+      "physical_pdf_page": 3,
+      "section": "§2",
+      "anchor": "CAPTCHAs",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "Page 3 continues section 2 with CAPTCHAs, unpredictable modifications, and configuration changes, and describes building its own website implementations. Adjacent physical page 2 explicitly establishes standalone deployment and reproducibility; the source Wiki already identifies the paragraph as spanning pages 2-3."
+    },
+    {
+      "claim_id": "C16",
+      "source": "S01",
+      "physical_pdf_page": 6,
+      "section": "§3 / Fine-tuning analysis",
+      "anchor": "finetuned",
+      "anchor_found_on_cited_page_after_unicode_ligature_normalization": true,
+      "decision": "supported",
+      "reason": "Page 6 includes fine-tuning analysis on HotpotQA, supporting the warning against defining every ReAct setup as permanently untrained."
+    }
+  ],
+  "pedagogical_review": {
+    "decision": "pass",
+    "scheduling_focus": "Substantive. Two fixed events and three tasks introduce duration/deadline fields. T1 then carries a concrete overlap, local repair, seven hard-rule categories, and ask/pass/stop outcomes through the lesson. All 13 Wiki entries link their source or concept to this workflow; the deck is reorganized around scheduling rather than merely renamed.",
+    "novice_readability": "The deck moves from familiar times/tasks to AI/tool/human roles, then feedback, repair, acceptance, stopping, and three concrete quiz questions. IDs and times stay consistent. Research appears after the everyday example; technical model/API detail is in the source Wiki and notes.",
+    "research_scope": "The five papers provide different mechanism and evaluation perspectives. Wiki, comparison and deck explicitly distinguish these from five scheduling algorithms, a scheduling performance ranking, or proof of optimality.",
+    "invented_fixtures_and_fixed_validation": "The day, tasks, times, overlap and repair are explicitly synthetic/author-designed. Initial overlap is fault injection; moving only T1 is an AI-author repair. validate is a deterministic checker, not a planner. Eight fixtures and routing at repair_round 3 do not establish autonomous-model performance or three actual model revisions.",
+    "model_training_and_memory": "ReAct main frozen-model prompting is distinguished from its fine-tuning analysis. Toolformer updates weights through filtered tool-call training data. Reflexion modifies textual memory/context without weight updates in the described mechanism. The project disclaims Toolformer training and a full Reflexion implementation.",
+    "acceptance_limits": "PASS covers listed hard conditions and is handed to a person. Preferences, travel, cross-day scheduling, external calendar writes, optimality, general model success and learning outcomes are not asserted as established.",
+    "arithmetic_by_inspection": "T1 15:30-17:00 overlaps F1 15:00-16:00. Repair to 16:00-17:30 retains 90 minutes and finishes before 18:00. T2 19:00-20:00 and T3 20:00-20:30 abut without overlap and finish by 21:00. This inspection is not validator execution."
+  },
+  "structural_observations": {
+    "wiki_entries": 13,
+    "slide_scripts": 14,
+    "research_claims": 16,
+    "comparison_rows": 5,
+    "query_selections": 4,
+    "references": "Related Wiki IDs, slide Wiki IDs and selected claim IDs exist in source JSON. All five sources are selected by slide evidence. This is a source-data observation, not a rendered-link or browser test."
+  },
+  "resolved_observations": [
+    {
+      "issue": "Query-gate metadata initially held CRLF hashes while reviewed content bytes use LF.",
+      "resolution": "The parent author updated provenance metadata during this review. Re-read query-gate.json: current fields match actual LF content; retained original_crlf_hashes exactly reproduce the CRLF representation of the same files. Its representation note explicitly says no second execution.",
+      "verification": [
+        {
+          "path": "content/wiki.json",
+          "current_lf_sha256": "2160c98cc45f7f5e58a62fcaebca0fd3eec64549829a2e720e6a2bf763220b26",
+          "retained_original_crlf_sha256": "57cd3f88cddeb477fd3433e2d4de2f5b94822ca2b47f6df75410c38d25c6f3c8",
+          "both_hashes_reproduced": true
+        },
+        {
+          "path": "content/queries.json",
+          "current_lf_sha256": "67b446533593a9797d2ddb6a0c206992a37c66517bf4eb8926db342ef8121276",
+          "retained_original_crlf_sha256": "329be32e3a551d007e202af4e6e64e9e6f9b1060347ef7acf96eba4cc7b19a3a",
+          "both_hashes_reproduced": true
+        }
+      ],
+      "required_change": null
+    }
+  ],
+  "findings": [],
+  "required_changes": [],
+  "overall": "pass",
+  "overall_limit": "Pass covers source fidelity and pedagogical clarity of the hashed content/PDF snapshot only. It does not certify rendered HTML, browser interactions, executable robustness, historical log authenticity, or benchmark/learning results.",
+  "follow_up_reviews": [
+    {
+      "follow_up_date": "2026-11-16",
+      "follow_up_at_utc": "2026-11-16T08:44:05.804604+00:00",
+      "trigger": "The parent reported that a fresh build stopped because the rerun schedule record no longer matched the reviewed input hash. This build failure was not independently executed or reproduced by the reviewer.",
+      "observed_discrepancy": {
+        "path": "evidence/schedule-run.json",
+        "previous_reviewed_snapshot": {
+          "path": "evidence/schedule-run.json",
+          "sha256": "6fc813bcfb6d338812ff17d6913931d27ed2c4b02cc83db7e7bd903f2698e853",
+          "bytes": 17603
+        },
+        "current_snapshot": {
+          "path": "evidence/schedule-run.json",
+          "sha256": "8774fd8938ebba65f15d2a1067ed715b6b6a01e8c0911fa64aaefc745775d9f3",
+          "bytes": 18358
+        },
+        "previous_timestamp_utc": "2026-11-10T16:57:11.440854+00:00",
+        "current_timestamp_utc": "2026-11-16T08:42:29.678164+00:00",
+        "json_fields_changed": [
+          "timestamp_utc"
+        ],
+        "git_head_crlf_count": 0,
+        "current_crlf_count": 755,
+        "representation_note": "The bytes also changed from LF to CRLF. After normalizing line endings and restoring the earlier timestamp, the full file bytes are identical."
+      },
+      "comparison": {
+        "baseline": "git HEAD:evidence/schedule-run.json",
+        "head_commit": "a24a3e8f430fc94334ffa10f349383777a1e45d0",
+        "baseline_sha256": "6fc813bcfb6d338812ff17d6913931d27ed2c4b02cc83db7e7bd903f2698e853",
+        "substantive_json_equal_excluding_timestamp_utc": true,
+        "all_eight_fixtures_results_and_other_metadata_unchanged": true,
+        "byte_equality_after_timestamp_and_line_ending_normalization": true
+      },
+      "content_inputs_rechecked": [
+        {
+          "path": "content/claims.json",
+          "sha256": "e6520a5b0fe168188f767685ae9ac8eca92945f4dceacc12f03581ec09c704c4",
+          "matches_original_review": true
+        },
+        {
+          "path": "content/wiki.json",
+          "sha256": "2160c98cc45f7f5e58a62fcaebca0fd3eec64549829a2e720e6a2bf763220b26",
+          "matches_original_review": true
+        },
+        {
+          "path": "content/deck.json",
+          "sha256": "ab90d289d63cff2f9f1f03d1bf6dbd1be0ead65736828d76bf54053eb38af74e",
+          "matches_original_review": true
+        },
+        {
+          "path": "content/comparison.json",
+          "sha256": "1006a6df004bd29d9e52d7754e556f44ae3cd7a7c3de3ca0fb7e9c81253de09b",
+          "matches_original_review": true
+        },
+        {
+          "path": "content/queries.json",
+          "sha256": "67b446533593a9797d2ddb6a0c206992a37c66517bf4eb8926db342ef8121276",
+          "matches_original_review": true
+        }
+      ],
+      "other_recorded_input_hashes_unchanged": true,
+      "scope": "Read-only comparison of recorded JSON, Git baseline and actual file hashes. The reviewer did not invoke run_schedule.py or execute the validator, build/check scripts, browser tests, or a model. This verifies record equivalence, not independent execution or historical log authenticity.",
+      "resolution": "Updated only the schedule-run entry in inputs_reviewed to the actual current bytes and appended this follow-up. Original source-fidelity and pedagogical decisions remain unchanged.",
+      "decision": "pass",
+      "required_changes": []
+    }
+  ],
+  "last_follow_up_at_utc": "2026-11-16T08:44:05.804604+00:00"
+}

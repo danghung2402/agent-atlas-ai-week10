@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.pdf binary
+*.zip binary
+evidence/schedule-run.json -text
+downloads/schedule-run.json -text
