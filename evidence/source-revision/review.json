@@ -1,0 +1,342 @@
+{
+  "review_completed_at_utc": "2026-11-16T09:55:41Z",
+  "reviewer": {
+    "kind": "fresh-context AI review",
+    "model_family_same_as_author": true,
+    "human_review": false,
+    "author_conversation_seen": false,
+    "note": "Fresh context with no access to the author's conversation; the follow-up was done by the same reviewer instance as the first pass, re-checking each claimed fix against the files and PDFs rather than the author's description, but I share the author's model family and may share its blind spots."
+  },
+  "first_pass": {
+    "completed_at_utc": "2026-11-16T09:49:13Z",
+    "overall": "fail",
+    "required_changes": [
+      "F01",
+      "F02",
+      "F03",
+      "F09"
+    ]
+  },
+  "inputs_reviewed": [
+    {
+      "path": "content/sources.json",
+      "sha256": "f9a99b96cf5931f6bb12d82cd2713701737db5bc183d38df4193d79e14c7487a"
+    },
+    {
+      "path": "content/claims.json",
+      "sha256": "390dbf23edcaf24b7a984211d2a382026f8a5e3bf87a733ec36e995896b2d12e"
+    },
+    {
+      "path": "content/wiki.json",
+      "sha256": "0243029301ccffa0bb48ad16d2700fe1ec5143493510173983fe9c342d54b7da"
+    },
+    {
+      "path": "content/deck.json",
+      "sha256": "594eb530e3ae42aabde5fb449d530cc92fa2f67590663c43afdf2e83f0aa9500"
+    },
+    {
+      "path": "content/comparison.json",
+      "sha256": "97b21d5085f5b40fc606fb39154d92bc659ff14a00bf7f0cc89f4229467cb24a"
+    },
+    {
+      "path": "content/queries.json",
+      "sha256": "2be1d1d9c4ab85992ef2a940656cd4284c3b45889d0948cc8d415e7dd604d1f4"
+    },
+    {
+      "path": "raw/S01.pdf",
+      "sha256": "f285b0971ae4a790e402fb93966bed3adde2cf0a04977d08b2b40d6ab0cace69"
+    },
+    {
+      "path": "raw/S03.pdf",
+      "sha256": "6059b6f89fea9959bd3dab553fbb97756a3dfb1b15e3cbab2fbf3ab6664333bd"
+    },
+    {
+      "path": "raw/S04.pdf",
+      "sha256": "6d599fcccc36b9bbe3f7700da916fac547d14b9d94a676bc677d1851d52bf7c8"
+    },
+    {
+      "path": "raw/S05.pdf",
+      "sha256": "f9731b92bc3d29a2ea7b5f9cb46b48540c76bc3f84a57e0c48fc37ea73107f95"
+    },
+    {
+      "path": "raw/S06.pdf",
+      "sha256": "29f5415f3425668054d91b912c90f7aab1ec7faaecf108478fa7c123db5d563e"
+    }
+  ],
+  "claim_checks": [
+    {
+      "id": "C01",
+      "source": "S01",
+      "page": 3,
+      "status": "supported",
+      "reason": "p.3 §2 defines the agent receiving observation o_t, thoughts updating the context for future reasoning/acting, and trajectories of alternating thought-action-observation steps."
+    },
+    {
+      "id": "C02",
+      "source": "S01",
+      "page": 3,
+      "status": "supported",
+      "reason": "p.3 states the paper mainly focuses on a frozen PaLM-540B prompted with few-shot in-context examples; the 'not retraining each step' caution follows directly."
+    },
+    {
+      "id": "C05",
+      "source": "S03",
+      "page": 1,
+      "status": "supported",
+      "reason": "Abstract: reinforces agents 'not by updating weights' but via linguistic feedback kept as reflective text in an episodic memory buffer for subsequent trials."
+    },
+    {
+      "id": "C06",
+      "source": "S04",
+      "page": 1,
+      "status": "supported",
+      "reason": "Abstract: 'currently consists of 8 distinct environments' assessing reasoning and decision-making in a multi-turn open-ended setting; '所選版本' correctly hedges 'currently'."
+    },
+    {
+      "id": "C07",
+      "source": "S04",
+      "page": 1,
+      "status": "supported",
+      "reason": "Abstract names poor long-term reasoning, decision-making and instruction following as the main obstacles."
+    },
+    {
+      "id": "C08",
+      "source": "S05",
+      "page": 6,
+      "status": "supported",
+      "reason": "§3.2: information-seeking tasks compare the answer (exact_match/must_include/fuzzy_match); navigation and content/config tasks use r_prog to programmatically examine site states against the intended result."
+    },
+    {
+      "id": "C09",
+      "source": "S05",
+      "page": 2,
+      "status": "supported",
+      "reason": "Introduction p.2: best GPT-4 agent end-to-end task success 14.41% vs human 78.24%; card keeps version v4 and frames it as historical."
+    },
+    {
+      "id": "C10",
+      "source": "S01",
+      "page": 6,
+      "status": "supported",
+      "reason": "p.6 Table 2 and observations B/C: ReAct-specific error of repetitively generating previous thoughts/actions and failing to jump out of the loop; non-informative search is 23% of errors, on HotpotQA."
+    },
+    {
+      "id": "C12",
+      "source": "S03",
+      "page": 3,
+      "status": "supported",
+      "reason": "§3 p.3: modular formulation with three distinct models, Actor (generates text/actions), Evaluator (scores outputs), Self-Reflection (verbal reinforcement cues)."
+    },
+    {
+      "id": "C13",
+      "source": "S03",
+      "page": 2,
+      "status": "supported",
+      "reason": "Introduction p.2 lists the disadvantages of relying on the LLM's self-evaluation capabilities (or heuristics) and having no formal guarantee for success."
+    },
+    {
+      "id": "C14",
+      "source": "S04",
+      "page": 4,
+      "status": "partially_supported",
+      "reason": "Unchanged since the first pass. p.4 lists Invalid Format, Invalid Action, Context Limit Exceeded, Task Limit Exceeded and 'Complete (task ends normally)', but the clause that normal completion must be judged separately from success is only implied there; it is stated explicitly in Appendix J.1.2 on p.44 ('irrespective of the end outcome')."
+    },
+    {
+      "id": "C15",
+      "source": "S05",
+      "page": 3,
+      "status": "supported",
+      "reason": "p.3 (continuing §2 from p.2): standalone environment avoids live websites, circumventing CAPTCHAs, unpredictable content changes and configuration changes; the page describes self-built versions of sites, so the 'not arbitrary real websites' caveat is a fair reading."
+    },
+    {
+      "id": "C16",
+      "source": "S01",
+      "page": 6,
+      "status": "supported",
+      "reason": "p.6 'ReAct performs best for fine-tuning': finetuning PaLM-8B/62B with 3,000 examples, so the paper is not prompting-only."
+    },
+    {
+      "id": "C17",
+      "source": "S06",
+      "page": 3,
+      "status": "supported",
+      "reason": "§2.1.3 p.3: Calendar Scheduling schedules work meetings between multiple people given existing schedules and constraints; difficulty varied by number of people and workdays."
+    },
+    {
+      "id": "C18",
+      "source": "S06",
+      "page": 1,
+      "status": "supported",
+      "reason": "Re-checked after the edit (was partially_supported at p.3). The card now cites p.1 Abstract, where the new anchor occurs: outputs from 'Google Flights, Google Maps, and Google Calendar' are given 'as contexts to the models', which 'eliminates the need for a tool-use environment', with evaluation focused on planning; the parenthetical pointer to p.3 §2.1 ('decouple tool-use from the reasoning task') is also correct."
+    },
+    {
+      "id": "C19",
+      "source": "S06",
+      "page": 4,
+      "status": "supported",
+      "reason": "§2.2.3 p.4: 30-minute or 1-hour meetings; subset 1 fixes a day with 2-7 attendees, subset 2 fixes 2 attendees over 1-5 workdays; earliest-availability and avoid-time-frame constraints ensure a single solution."
+    },
+    {
+      "id": "C20",
+      "source": "S06",
+      "page": 5,
+      "status": "supported",
+      "reason": "Re-checked after the edit. p.5 Table 2 Calendar Scheduling row reads GPT-3.5 19.9%, GPT-4 41.2%, GPT-4o 43.7%, Gemini 1.5 Flash 34.3%, Gemini 1.5 Pro 48.9% in the 5-shot setup with exact-match scoring; all five card values match, the model strings (gpt-4-turbo-2024-04-09, gpt-4o-2024-05-13, gpt-3.5-turbo-0125) match p.4 §3.1, and 'all models below 50% on all three tasks despite tool info in context' is on p.5."
+    },
+    {
+      "id": "C21",
+      "source": "S06",
+      "page": 7,
+      "status": "supported",
+      "reason": "p.7: performance reduces as complexity increases, and for Calendar Scheduling 'the drop of accuracy is not as significant' as for the other two tasks."
+    },
+    {
+      "id": "C22",
+      "source": "S06",
+      "page": 8,
+      "status": "supported",
+      "reason": "§4.4 p.8: self-correction results are shown for Trip Planning; 'significant model performance drop across all models', with GPT-4 and Gemini 1.5 Pro losing more than GPT-3.5; card correctly scopes it away from Calendar Scheduling."
+    }
+  ],
+  "claim_summary": {
+    "supported": 18,
+    "partially_supported": 1,
+    "unsupported": 0
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "severity": "medium",
+      "location": "content/deck.json slide 04 (chart items) vs content/claims.json C20 and content/wiki.json natural-plan-paper",
+      "issue": "First pass: all five bar values matched PDF p.5 Table 2, but GPT-4o 43.7, Gemini 1.5 Flash 34.3 and GPT-3.5 19.9 were not stated in any evidence card or Wiki note (C20 and natural-plan-paper gave only 48.9 and 41.2), so the chart used numbers that had not passed through the card -> Wiki -> query pipeline.",
+      "required_change": "Extend C20 (or add one card) to state the full Calendar Scheduling row of Table 2 with the model versions from p.4 §3.1, carry it into natural-plan-paper, and re-run the source and query gates; otherwise drop the three uncarded bars.",
+      "status": "resolved",
+      "resolution": "C20 now lists all five Calendar Scheduling values with model versions; I matched each against the p.5 Table 2 row and p.4 §3.1, confirmed natural-plan-paper '結果與條件' lists the same five, and confirmed every chart value on slide 04 (unchanged) now appears in both C20 and that Wiki section."
+    },
+    {
+      "id": "F02",
+      "severity": "medium",
+      "location": "content/deck.json slide 13 quiz item 4; content/wiki.json agent-basics section '為什麼不能直接相信草稿'",
+      "issue": "First pass: '48.9%' appeared without the task name in quiz Q4 and in agent-basics, where 'AI 排會議' was ambiguous with Meeting Planning (best: GPT-4 at 47.0%); this broke the project's top lint rule that percentages carry version, task, metric and condition.",
+      "required_change": "Name 'Calendar Scheduling' and the model (Gemini 1.5 Pro) next to 48.9% in agent-basics, and add 'v1 · Calendar Scheduling' to quiz Q4's question or explanation.",
+      "status": "resolved",
+      "resolution": "agent-basics now states v1, Calendar Scheduling, 5-shot, exact match and Gemini 1.5 Pro next to 48.9%; quiz Q4's question names v1 and Calendar Scheduling and its explanation names Gemini 1.5 Pro, 5-shot and exact-match scoring; the only other 48.9 occurrences (natural-plan-paper, slide 04 chart with caption) already carried these conditions."
+    },
+    {
+      "id": "F03",
+      "severity": "low",
+      "location": "content/claims.json C18; repeated as 'Google Calendar 等' in content/wiki.json natural-plan-paper '原文的任務' and tool-use '查詢工具與檢查工具', and in content/deck.json slide 07 notes",
+      "issue": "First pass: C18 cited p.3, which names only Google Flights; 'Google Calendar' is on p.1 (Abstract) and p.9, so a grader opening p.3 could not find the example.",
+      "required_change": "Point C18 to p.1 Abstract, or add it as a second locator; or change the example to Google Flights/Maps to match p.3.",
+      "status": "resolved",
+      "resolution": "C18 now cites p.1 Abstract with anchor 'Google Calendar as contexts to the models', which I found on that page; the rewritten card text is supported there, so the three downstream 'Google Calendar 等' mentions are now traceable."
+    },
+    {
+      "id": "F04",
+      "severity": "low",
+      "location": "content/claims.json C14; content/wiki.json agentbench-paper '結束原因', evaluation '研究提供的觀點'; content/deck.json slide 10 notes",
+      "issue": "'正常結束不等於成功' is only implied by p.4's 'Complete (task ends normally)'. AgentBench says it explicitly on p.44 (Appendix J.1.2: Completed 'irrespective of the end outcome').",
+      "required_change": null,
+      "status": "advisory_open",
+      "resolution": "Not changed by the author; C14 still cites p.4 only, so it stays partially_supported. Adding p.44 as a second locator would close it."
+    },
+    {
+      "id": "F05",
+      "severity": "low",
+      "location": "content/wiki.json evaluation '與 NATURAL PLAN 計分的差別'; content/deck.json slide 10 notes; content/comparison.json S06 'mechanism'",
+      "issue": "First pass: 'NATURAL PLAN 每題設計成只有一個解' generalised to the whole benchmark, while the paper states single-solution design only for Trip Planning (p.3) and Calendar Scheduling (p.4); the comparison row described the whole benchmark as scheduling a unique meeting time.",
+      "required_change": null,
+      "status": "resolved",
+      "resolution": "All three places now scope the single-solution statement to the calendar task ('NATURAL PLAN 的日曆排程題…', 'NATURAL PLAN 的日曆題…', '日曆排程題要求排出唯一正確的會議時間'), which matches p.4."
+    },
+    {
+      "id": "F06",
+      "severity": "low",
+      "location": "content/deck.json slide 05 and slide 08 notes; content/wiki.json feedback-memory '評估也會錯', natural-plan-paper '本主題如何使用'",
+      "issue": "First pass: these sentences presented the external-checker design as a consequence of NATURAL PLAN's self-correction finding, although the paper did not test checker-guided repair and the design predates the S06 ingest.",
+      "required_change": null,
+      "status": "resolved",
+      "resolution": "All four places now call it a design choice or motivation and state that the paper did not test an external checker; '是因為' is gone from slide 05. The remaining '因此選擇/據此選擇' reads as present rationale, which I accept, though the design itself existed before S06 was added."
+    },
+    {
+      "id": "F07",
+      "severity": "low",
+      "location": "content/wiki.json methods-are-different '自我修正與外部檢查'",
+      "issue": "First pass: the synthesis implied Reflexion favours external checking over self-checking, although Reflexion also reports gains from self-evaluation signals.",
+      "required_change": null,
+      "status": "resolved",
+      "resolution": "The section now says Reflexion's self-evaluation signals helped in its experiments but depend on evaluation quality with no guarantee, and labels external rule checking as this assignment's design choice; I checked the new Reflexion sentence against S03 p.1 Abstract and pp.5-7. See F13 for two small points the rewrite introduced."
+    },
+    {
+      "id": "F08",
+      "severity": "low",
+      "location": "content/wiki.json schedule-case '固定事件與待辦'",
+      "issue": "First pass: the page described the fixture as resembling the NATURAL PLAN calendar format including earliest-availability or avoided-slot constraints, which the fixture does not have.",
+      "required_change": null,
+      "status": "resolved",
+      "resolution": "The sentence now limits the resemblance to 'existing schedule first, then place new items' and states the differences (multi-person shared meeting with earliest-availability/avoid-slot constraints vs. one person with task durations and deadlines; self-authored data), consistent with p.3-4."
+    },
+    {
+      "id": "F09",
+      "severity": "low",
+      "location": "content/deck.json slides 10 and 11 (evidence C07); slide 13 (evidence C13)",
+      "issue": "First pass: C07 did not support slide 10's acceptance criteria or slide 11's ask/stop routing, and C13 did not relate to any quiz item on slide 13, against the rule that citations relate directly to what the slide says.",
+      "required_change": "Remove C07 from slides 10 and 11, and C13 from slide 13, or rewrite the slide text so it actually uses those claims.",
+      "status": "resolved",
+      "resolution": "Slide 10 now cites C08, C14, C19; slide 11 cites C08, C13, C14; slide 13 cites C01, C08, C20. Each remaining card relates to that slide's text. C07 is still cited on slide 15 (sources page) and all five sources remain used in the deck."
+    },
+    {
+      "id": "F10",
+      "severity": "low",
+      "location": "content/deck.json slide 05 (wiki: agent-basics, evidence C22)",
+      "issue": "First pass: slide 05's notes relied on C22, but the linked Wiki note agent-basics neither listed C22 nor discussed self-correction.",
+      "required_change": null,
+      "status": "resolved",
+      "resolution": "agent-basics now lists C22 and states the Trip Planning self-correction result with its scope ('不是日曆題'); every slide-05 evidence ID is now in its linked Wiki note."
+    },
+    {
+      "id": "F11",
+      "severity": "low",
+      "location": "content/deck.json slides 04, 06, 08, 09 (sequence and wording)",
+      "issue": "Beginner clarity: (a) slides 06 and 08 refer to the T1-F1 conflict before slide 09 first shows the original draft and says it was deliberately injected; (b) '5-shot' and 'exact match' on slide 04 were not explained in plain words; (c) ReAct and Reflexion appear on slides 06 and 08 with no line saying they are research papers until slide 12.",
+      "required_change": null,
+      "status": "advisory_open",
+      "resolution": "(b) is addressed: slide 04's notes and natural-plan-paper now explain 5-shot ('先給 5 個範例') and exact match, though the slide caption itself still says '5-shot 提示'. (a) and (c) are unchanged, as the author stated."
+    },
+    {
+      "id": "F12",
+      "severity": "low",
+      "location": "README.md lines 3 and 7 (outside the listed inputs; observed while reading context)",
+      "issue": "First pass: README said 十四頁簡報 and 十六張證據卡 while the content had 15 slides and 19 cards.",
+      "required_change": null,
+      "status": "resolved",
+      "resolution": "Observed only (README is not a hashed review input): the working-tree README.md now says 十五頁簡報 and 十九張證據卡, matching the content."
+    },
+    {
+      "id": "F13",
+      "severity": "low",
+      "location": "content/wiki.json methods-are-different '自我修正與外部檢查' (text introduced by the F07 rewrite)",
+      "issue": "New in the follow-up. (a) 'Reflexion 的自我評估訊號在其實驗中有幫助' is accurate at paper level (S03 p.1 Abstract: internally simulated feedback sources with significant improvements; pp.5-7: LLM/heuristic self-evaluation on AlfWorld and self-generated unit tests for programming), but no evidence card states it (C05, C12, C13 do not), and the paper also reports a case where Reflexion trailed the baseline (MBPP Python, p.8). (b) '兩篇都沒有直接測試這種做法' is conservative but over-broad for Reflexion, which did use non-LLM evaluators (binary environment feedback, a hand-written heuristic; p.2, p.5); 'neither paper tested a scheduling rule checker' would be exact. Neither point overstates research support, so I am not making this required.",
+      "required_change": null,
+      "status": "advisory_open",
+      "resolution": "Raised in the follow-up; not yet addressed. A card (or locator) for the Reflexion self-evaluation sentence and narrower wording for (b) would close it."
+    }
+  ],
+  "pedagogy": {
+    "sequence_assessment": "Unchanged from the first pass: clear and mostly incremental (fixed events -> tasks with duration and deadline -> why a draft cannot be trusted -> AI/tool/human roles -> feedback loop -> checker inputs and outputs -> specific feedback -> one local repair -> what 'done' means -> when to ask or stop -> how the five sources relate -> retryable quiz -> takeaway -> sources), with one small worked example throughout.",
+    "topic_focus": "Good. Slide 04 gives a direct scheduling result from NATURAL PLAN with version, task, metric and setting; the other four papers are framed as viewpoints, and slide 12 says the sources are not a performance ranking.",
+    "separation_of_research_design_fixture": "Clearer than in the first pass. The external-checker design is now explicitly labelled a design choice that the papers did not test; percentages name version, task, metric, setting and model wherever they appear; fixtures and the injected conflict remain labelled as self-authored.",
+    "beginner_pain_points": "Still open and advisory: the conflict is referenced on slides 06 and 08 before slide 09 shows the draft (F11a), and ReAct/Reflexion are named before slide 12 identifies them as papers (F11c). '5-shot' and exact match are now explained in slide 04's notes; whether learners see the notes depends on the rendered page, which I did not check."
+  },
+  "required_changes": [],
+  "overall": "pass",
+  "limits": [
+    "Follow-up scope was narrow, as requested: I re-read C18 and C20 against S06 p.1, p.4 and p.5, diffed all four changed content files against the first-pass commit (02d2332) and checked every changed line; unchanged text was not re-reviewed, and the 17 unchanged cards carry over their first-pass verdicts (their text is byte-identical and all 19 anchors still occur on the cited pages).",
+    "Did not review rendered HTML (dist/), CSS, chart axis/scaling, or browser behaviour (navigation, search, quiz interaction, speaker notes, narrow-screen layout).",
+    "Did not run build.py, check.py, check_sources.py, check_queries.py, run_schedule.py or check_schedule_js.cjs. I only observed that evidence/source-revision/sources-gate-after-review.json, query-gate.json and slides-authored.json exist and reference the current claims, wiki and deck hashes; I did not verify how they were produced.",
+    "PDF checks used PyMuPDF text extraction with NFKC normalisation; figures were not read visually.",
+    "Did not re-download sources from arXiv; the local PDF SHA-256 values are unchanged from the first pass and match content/sources.json.",
+    "The author committed the fixes (96fff24) while this follow-up was in progress; the hashes recorded here are of the working-tree files, which match that commit for the four changed content files. README.md and AGENTS.md were read for context only and are not hashed inputs.",
+    "'pass' means no required finding remains open in the reviewed inputs; three advisory findings (F04, F11, F13) are still open. Same model family as the author; no human review."
+  ]
+}

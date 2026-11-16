@@ -1,0 +1,36 @@
+[
+  {
+    "timestamp_utc": "2026-11-16T09:34:10.074994+00:00",
+    "node": "NODE 02 source gate",
+    "observation": "Two edits adding an output-path argument to check_sources.py were rejected by the editing tool, so the first S06 gate run used the old hard-coded path and overwrote evidence/topic-revision/sources-gate.json (the earlier round's record).",
+    "action": "Restored the earlier record from Git, saved the misdirected run as sources-gate-S06-misdirected-run.json, applied the edits, reran the gate to sources-gate-S06.json (09:34:35Z, 79 checks passed).",
+    "detected_by": "git status / file path check by the AI author before writing the Wiki"
+  },
+  {
+    "timestamp_utc": "2026-11-16T09:39:00+00:00",
+    "node": "NODE 05 slide authoring (tooling)",
+    "observation": "The first attempt to create scripts/author_source_revision_slides.py through a shell here-document was cut off after 63 lines; running it raised a SyntaxError, so content/deck.json was not written (git status showed only the partial script).",
+    "action": "Deleted the partial file, recreated the full script with a file-writing tool, and ran it; it first verified the query gate and input hashes, then wrote 15 slides at 09:40:30Z.",
+    "content_changed_by_failure": false,
+    "time_note": "Approximate time; the failure itself produced no timestamped record."
+  },
+  {
+    "timestamp_utc": "2026-11-16T09:49:13+00:00",
+    "node": "NODE 06 fresh-context review -> back to NODE 02",
+    "observation": "The fresh-context reviewer returned FAIL (17 cards supported, 2 partially): F01 three chart values on slide 04 had no evidence card; F02 48.9% appeared without the task name; F03 C18 cited p.3, which does not name Google Calendar; F09 C07/C13 were cited on slides they do not support. Eight advisory findings.",
+    "action": "Returned to the evidence-card node: fixed C18/C20, reran the source gate (09:50Z), then fixed the Wiki notes, reran the query gate, rewrote the slides through the gated script (09:51Z), and asked the same reviewer to re-check. First-pass report kept as review-first-pass-fail.json.",
+    "detected_by": "fresh-context AI reviewer, before any HTML was rendered"
+  },
+  {
+    "timestamp_utc": "2026-11-16T10:02:30.030833+00:00",
+    "node": "NODE 07 render (found by browser test)",
+    "observation": "At 1280×800 slide 4 (new five-bar chart) overflowed by 36px and slide 13 (four-question quiz; the fourth card wrapped to a new row) by 291px.",
+    "action": "Changed only static/learning.css (four columns when a quiz has four questions; tighter spacing for five-bar charts), rebuilt, re-measured: 15/15 slides fit at 1280×800 and 1067×667. No content file changed."
+  },
+  {
+    "timestamp_utc": "2026-11-16T09:51:17+00:00",
+    "node": "NODE 02→05 order after review (process note)",
+    "observation": "After the failed review, the fixes for cards, Wiki and slides were written beforehand in one fix script and then run as one command chain: card fix → source gate (09:51:17.40Z) → Wiki fix → query gate (.77Z) → slides (.96Z).",
+    "action": "Order of execution is real and each gate would stop the chain on failure, but the gates could not influence text that was already written. Recorded here instead of presenting the sub-second timestamps as separate authoring steps."
+  }
+]

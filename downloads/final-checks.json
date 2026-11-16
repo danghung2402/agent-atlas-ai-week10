@@ -1,20 +1,20 @@
 {
-  "timestamp_utc": "2026-11-16T08:46:26.108456+00:00",
+  "timestamp_utc": "2026-11-16T10:03:09.657972+00:00",
   "topic": "AI 如何安排課業與工作？",
   "passed": true,
   "sources": 5,
   "wiki_pages": 13,
-  "slides": 14,
-  "evidence_cards": 16,
+  "slides": 15,
+  "evidence_cards": 19,
   "html_pages": 20,
-  "internal_references": 585,
+  "internal_references": 613,
   "source_coverage": "5/5",
-  "gate_checks": 919,
+  "gate_checks": 961,
   "schedule_cases": 8,
   "independent_source_review": "pass",
   "failed": [],
-  "semantic_review": "Current scheduling-topic fresh-context review in scheduling-review.json; script checks locators and unchanged inputs, not semantic truth.",
-  "browser_review": "See evidence/topic-revision/browser.json; earlier browser reports do not verify this revision.",
+  "semantic_review": "Source-revision fresh-context review in evidence/source-revision/review.json; script checks locators and unchanged inputs, not semantic truth.",
+  "browser_review": "See evidence/source-revision/browser.json; earlier browser reports do not verify this revision.",
   "checks": [
     {
       "check": "at least five distinct primary sources",
@@ -26,14 +26,6 @@
     },
     {
       "check": "S01: PDF page count",
-      "passed": true
-    },
-    {
-      "check": "S02: original PDF hash",
-      "passed": true
-    },
-    {
-      "check": "S02: PDF page count",
       "passed": true
     },
     {
@@ -61,6 +53,14 @@
       "passed": true
     },
     {
+      "check": "S06: original PDF hash",
+      "passed": true
+    },
+    {
+      "check": "S06: PDF page count",
+      "passed": true
+    },
+    {
       "check": "C01: registered source",
       "passed": true
     },
@@ -82,30 +82,6 @@
     },
     {
       "check": "C02: source locator phrase found (not a semantic proof)",
-      "passed": true
-    },
-    {
-      "check": "C03: registered source",
-      "passed": true
-    },
-    {
-      "check": "C03: page locator exists",
-      "passed": true
-    },
-    {
-      "check": "C03: source locator phrase found (not a semantic proof)",
-      "passed": true
-    },
-    {
-      "check": "C04: registered source",
-      "passed": true
-    },
-    {
-      "check": "C04: page locator exists",
-      "passed": true
-    },
-    {
-      "check": "C04: source locator phrase found (not a semantic proof)",
       "passed": true
     },
     {
@@ -181,18 +157,6 @@
       "passed": true
     },
     {
-      "check": "C11: registered source",
-      "passed": true
-    },
-    {
-      "check": "C11: page locator exists",
-      "passed": true
-    },
-    {
-      "check": "C11: source locator phrase found (not a semantic proof)",
-      "passed": true
-    },
-    {
       "check": "C12: registered source",
       "passed": true
     },
@@ -253,6 +217,78 @@
       "passed": true
     },
     {
+      "check": "C17: registered source",
+      "passed": true
+    },
+    {
+      "check": "C17: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C17: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C18: registered source",
+      "passed": true
+    },
+    {
+      "check": "C18: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C18: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C19: registered source",
+      "passed": true
+    },
+    {
+      "check": "C19: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C19: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C20: registered source",
+      "passed": true
+    },
+    {
+      "check": "C20: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C20: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C21: registered source",
+      "passed": true
+    },
+    {
+      "check": "C21: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C21: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
+      "check": "C22: registered source",
+      "passed": true
+    },
+    {
+      "check": "C22: page locator exists",
+      "passed": true
+    },
+    {
+      "check": "C22: source locator phrase found (not a semantic proof)",
+      "passed": true
+    },
+    {
       "check": "thirteen unique Wiki notes",
       "passed": true
     },
@@ -266,18 +302,6 @@
     },
     {
       "check": "react-paper: Markdown output exists",
-      "passed": true
-    },
-    {
-      "check": "toolformer-paper: valid evidence cards",
-      "passed": true
-    },
-    {
-      "check": "toolformer-paper: related Wiki notes exist",
-      "passed": true
-    },
-    {
-      "check": "toolformer-paper: Markdown output exists",
       "passed": true
     },
     {
@@ -314,6 +338,18 @@
     },
     {
       "check": "webarena-paper: Markdown output exists",
+      "passed": true
+    },
+    {
+      "check": "natural-plan-paper: valid evidence cards",
+      "passed": true
+    },
+    {
+      "check": "natural-plan-paper: related Wiki notes exist",
+      "passed": true
+    },
+    {
+      "check": "natural-plan-paper: Markdown output exists",
       "passed": true
     },
     {
@@ -421,7 +457,7 @@
       "passed": true
     },
     {
-      "check": "fourteen authored teaching slides",
+      "check": "fifteen authored teaching slides (user chose one added slide)",
       "passed": true
     },
     {
@@ -481,11 +517,23 @@
       "passed": true
     },
     {
+      "check": "slide 15: selected Wiki and evidence only",
+      "passed": true
+    },
+    {
       "check": "new scheduling topic appears on cover",
       "passed": true
     },
     {
-      "check": "training and memory distinction visible on slides, not only notes",
+      "check": "memory vs training distinction visible on a slide lead, not only notes",
+      "passed": true
+    },
+    {
+      "check": "chart slides state source version and prompting setting",
+      "passed": true
+    },
+    {
+      "check": "chart numbers cite the card that holds them (C20)",
       "passed": true
     },
     {
@@ -498,6 +546,10 @@
     },
     {
       "check": "quiz: valid answer for 缺少任務時長，應該？",
+      "passed": true
+    },
+    {
+      "check": "quiz: valid answer for NATURAL PLAN v1 的 Calendar Scheduling 中，最佳模型 48.9% 代表什麼？",
       "passed": true
     },
     {
@@ -601,6 +653,14 @@
       "passed": true
     },
     {
+      "check": "wiki\\natural-plan-paper.html: unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html: declared Traditional Chinese",
+      "passed": true
+    },
+    {
       "check": "wiki\\react-loop.html: unique HTML IDs",
       "passed": true
     },
@@ -638,14 +698,6 @@
     },
     {
       "check": "wiki\\tool-use.html: declared Traditional Chinese",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html: unique HTML IDs",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html: declared Traditional Chinese",
       "passed": true
     },
     {
@@ -693,11 +745,11 @@
       "passed": true
     },
     {
-      "check": "deck.html → wiki/toolformer-paper.html: target exists",
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
       "passed": true
     },
     {
-      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -709,11 +761,7 @@
       "passed": true
     },
     {
-      "check": "deck.html → wiki/react-paper.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -725,15 +773,15 @@
       "passed": true
     },
     {
-      "check": "deck.html → wiki/toolformer-paper.html: target exists",
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
-      "check": "deck.html → wiki/reflexion-paper.html: target exists",
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
-      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -745,11 +793,11 @@
       "passed": true
     },
     {
-      "check": "deck.html → wiki/toolformer-paper.html: target exists",
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
       "passed": true
     },
     {
-      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -765,7 +813,7 @@
       "passed": true
     },
     {
-      "check": "deck.html → wiki/toolformer-paper.html: target exists",
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -774,6 +822,10 @@
     },
     {
       "check": "deck.html → wiki/reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -809,6 +861,10 @@
       "passed": true
     },
     {
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
+      "passed": true
+    },
+    {
       "check": "deck.html → wiki/when-stop.html: target exists",
       "passed": true
     },
@@ -833,10 +889,6 @@
       "passed": true
     },
     {
-      "check": "deck.html → wiki/toolformer-paper.html: target exists",
-      "passed": true
-    },
-    {
       "check": "deck.html → wiki/reflexion-paper.html: target exists",
       "passed": true
     },
@@ -846,6 +898,10 @@
     },
     {
       "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -861,11 +917,11 @@
       "passed": true
     },
     {
-      "check": "deck.html → wiki/reflexion-paper.html: target exists",
+      "check": "deck.html → wiki/webarena-paper.html: target exists",
       "passed": true
     },
     {
-      "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -877,10 +933,6 @@
       "passed": true
     },
     {
-      "check": "deck.html → wiki/toolformer-paper.html: target exists",
-      "passed": true
-    },
-    {
       "check": "deck.html → wiki/reflexion-paper.html: target exists",
       "passed": true
     },
@@ -893,10 +945,6 @@
       "passed": true
     },
     {
-      "check": "deck.html → wiki/toolformer-paper.html: target exists",
-      "passed": true
-    },
-    {
       "check": "deck.html → wiki/reflexion-paper.html: target exists",
       "passed": true
     },
@@ -906,6 +954,10 @@
     },
     {
       "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -917,10 +969,6 @@
       "passed": true
     },
     {
-      "check": "deck.html → wiki/toolformer-paper.html: target exists",
-      "passed": true
-    },
-    {
       "check": "deck.html → wiki/reflexion-paper.html: target exists",
       "passed": true
     },
@@ -930,6 +978,10 @@
     },
     {
       "check": "deck.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "deck.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -989,19 +1041,59 @@
       "passed": true
     },
     {
+      "check": "evidence.html → downloads/sr-requirements-confirmed.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sr-sources-gate-S06.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sr-sources-gate-S06.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sr-sources-gate-retire-S02.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sr-query-gate-first-run.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sr-slides-authored-first-run.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sr-review-first-pass-fail.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sr-sources-gate-after-review.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sr-query-gate.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sr-slides-authored.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sr-review.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sr-browser.json: target exists",
+      "passed": true
+    },
+    {
+      "check": "evidence.html → downloads/sr-commits.json: target exists",
+      "passed": true
+    },
+    {
       "check": "evidence.html → downloads/requirements-confirmed.json: target exists",
-      "passed": true
-    },
-    {
-      "check": "evidence.html → downloads/sources-gate.json: target exists",
-      "passed": true
-    },
-    {
-      "check": "evidence.html → downloads/authoring.json: target exists",
-      "passed": true
-    },
-    {
-      "check": "evidence.html → downloads/query-gate.json: target exists",
       "passed": true
     },
     {
@@ -1010,10 +1102,6 @@
     },
     {
       "check": "evidence.html → downloads/scheduling-review.json: target exists",
-      "passed": true
-    },
-    {
-      "check": "evidence.html → downloads/schedule-run.json: target exists",
       "passed": true
     },
     {
@@ -1029,7 +1117,7 @@
       "passed": true
     },
     {
-      "check": "evidence.html → downloads/scheduling-review.json: target exists",
+      "check": "evidence.html → downloads/sr-review.json: target exists",
       "passed": true
     },
     {
@@ -1041,7 +1129,7 @@
       "passed": true
     },
     {
-      "check": "evidence.html → downloads/browser-topic.json: target exists",
+      "check": "evidence.html → downloads/sr-browser.json: target exists",
       "passed": true
     },
     {
@@ -1265,10 +1353,6 @@
       "passed": true
     },
     {
-      "check": "sources.html → wiki/toolformer-paper.html: target exists",
-      "passed": true
-    },
-    {
       "check": "sources.html → wiki/reflexion-paper.html: target exists",
       "passed": true
     },
@@ -1278,6 +1362,10 @@
     },
     {
       "check": "sources.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "sources.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -1345,10 +1433,6 @@
       "passed": true
     },
     {
-      "check": "wiki.html → wiki/toolformer-paper.html: target exists",
-      "passed": true
-    },
-    {
       "check": "wiki.html → wiki/reflexion-paper.html: target exists",
       "passed": true
     },
@@ -1358,6 +1442,10 @@
     },
     {
       "check": "wiki.html → wiki/webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -1465,6 +1553,10 @@
       "passed": true
     },
     {
+      "check": "workflow.html → wiki/natural-plan-paper.html: target exists",
+      "passed": true
+    },
+    {
       "check": "workflow.html → wiki/react-loop.html: target exists",
       "passed": true
     },
@@ -1481,11 +1573,11 @@
       "passed": true
     },
     {
-      "check": "workflow.html → wiki/toolformer-paper.html: target exists",
+      "check": "workflow.html → wiki/reflexion-paper.html: target exists",
       "passed": true
     },
     {
-      "check": "workflow.html → wiki/reflexion-paper.html: target exists",
+      "check": "workflow.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -1510,6 +1602,10 @@
     },
     {
       "check": "workflow.html → wiki/schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "workflow.html → wiki/natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -1609,6 +1705,14 @@
       "passed": true
     },
     {
+      "check": "wiki\\agent-basics.html → #section-4: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → #section-4: fragment exists",
+      "passed": true
+    },
+    {
       "check": "wiki\\agent-basics.html → #evidence: target exists",
       "passed": true
     },
@@ -1633,7 +1737,15 @@
       "passed": true
     },
     {
+      "check": "wiki\\agent-basics.html → natural-plan-paper.html: target exists",
+      "passed": true
+    },
+    {
       "check": "wiki\\agent-basics.html → react-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\agent-basics.html → natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -1869,6 +1981,14 @@
       "passed": true
     },
     {
+      "check": "wiki\\evaluation.html → #section-4: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → #section-4: fragment exists",
+      "passed": true
+    },
+    {
       "check": "wiki\\evaluation.html → #evidence: target exists",
       "passed": true
     },
@@ -1885,6 +2005,10 @@
       "passed": true
     },
     {
+      "check": "wiki\\evaluation.html → natural-plan-paper.html: target exists",
+      "passed": true
+    },
+    {
       "check": "wiki\\evaluation.html → tool-use.html: target exists",
       "passed": true
     },
@@ -1898,6 +2022,10 @@
     },
     {
       "check": "wiki\\evaluation.html → webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\evaluation.html → natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -2025,6 +2153,10 @@
       "passed": true
     },
     {
+      "check": "wiki\\feedback-memory.html → natural-plan-paper.html: target exists",
+      "passed": true
+    },
+    {
       "check": "wiki\\feedback-memory.html → react-loop.html: target exists",
       "passed": true
     },
@@ -2038,6 +2170,10 @@
     },
     {
       "check": "wiki\\feedback-memory.html → reflexion-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\feedback-memory.html → natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -2145,30 +2281,6 @@
       "passed": true
     },
     {
-      "check": "wiki\\methods-are-different.html → toolformer-paper.html#evidence-C03: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\methods-are-different.html → toolformer-paper.html#evidence-C03: fragment exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\methods-are-different.html → toolformer-paper.html#evidence-C04: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\methods-are-different.html → toolformer-paper.html#evidence-C04: fragment exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\methods-are-different.html → toolformer-paper.html#evidence-C11: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\methods-are-different.html → toolformer-paper.html#evidence-C11: fragment exists",
-      "passed": true
-    },
-    {
       "check": "wiki\\methods-are-different.html → reflexion-paper.html#evidence-C05: target exists",
       "passed": true
     },
@@ -2241,6 +2353,46 @@
       "passed": true
     },
     {
+      "check": "wiki\\methods-are-different.html → natural-plan-paper.html#evidence-C17: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → natural-plan-paper.html#evidence-C17: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → natural-plan-paper.html#evidence-C19: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → natural-plan-paper.html#evidence-C19: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → natural-plan-paper.html#evidence-C20: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → natural-plan-paper.html#evidence-C20: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → natural-plan-paper.html#evidence-C21: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → natural-plan-paper.html#evidence-C21: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → natural-plan-paper.html#evidence-C22: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → natural-plan-paper.html#evidence-C22: fragment exists",
+      "passed": true
+    },
+    {
       "check": "wiki\\methods-are-different.html → #section-0: target exists",
       "passed": true
     },
@@ -2273,6 +2425,14 @@
       "passed": true
     },
     {
+      "check": "wiki\\methods-are-different.html → #section-4: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → #section-4: fragment exists",
+      "passed": true
+    },
+    {
       "check": "wiki\\methods-are-different.html → #evidence: target exists",
       "passed": true
     },
@@ -2285,10 +2445,6 @@
       "passed": true
     },
     {
-      "check": "wiki\\methods-are-different.html → toolformer-paper.html: target exists",
-      "passed": true
-    },
-    {
       "check": "wiki\\methods-are-different.html → reflexion-paper.html: target exists",
       "passed": true
     },
@@ -2298,6 +2454,10 @@
     },
     {
       "check": "wiki\\methods-are-different.html → webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -2309,10 +2469,6 @@
       "passed": true
     },
     {
-      "check": "wiki\\methods-are-different.html → toolformer-paper.html: target exists",
-      "passed": true
-    },
-    {
       "check": "wiki\\methods-are-different.html → reflexion-paper.html: target exists",
       "passed": true
     },
@@ -2322,6 +2478,10 @@
     },
     {
       "check": "wiki\\methods-are-different.html → webarena-paper.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\methods-are-different.html → natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -2334,6 +2494,150 @@
     },
     {
       "check": "wiki\\methods-are-different.html → ../assets/site.js: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../assets/favicon.svg: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../assets/style.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../assets/notebook.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../assets/learning.css: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → #main: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → #main: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../index.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../deck.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../workflow.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../evidence.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../wiki.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → #section-0: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → #section-0: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → #section-1: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → #section-1: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → #section-2: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → #section-2: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → #section-3: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → #section-3: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → #evidence: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → #evidence: fragment exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → feedback-memory.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → agent-basics.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → tool-use.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → feedback-memory.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → evaluation.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → methods-are-different.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → schedule-case.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../sources.html: target exists",
+      "passed": true
+    },
+    {
+      "check": "wiki\\natural-plan-paper.html → ../assets/site.js: target exists",
       "passed": true
     },
     {
@@ -2857,6 +3161,10 @@
       "passed": true
     },
     {
+      "check": "wiki\\schedule-case.html → natural-plan-paper.html: target exists",
+      "passed": true
+    },
+    {
       "check": "wiki\\schedule-case.html → agent-basics.html: target exists",
       "passed": true
     },
@@ -2989,7 +3297,7 @@
       "passed": true
     },
     {
-      "check": "wiki\\tool-use.html → toolformer-paper.html: target exists",
+      "check": "wiki\\tool-use.html → natural-plan-paper.html: target exists",
       "passed": true
     },
     {
@@ -3002,10 +3310,6 @@
     },
     {
       "check": "wiki\\tool-use.html → schedule-case.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\tool-use.html → toolformer-paper.html: target exists",
       "passed": true
     },
     {
@@ -3026,126 +3330,6 @@
     },
     {
       "check": "wiki\\tool-use.html → ../assets/site.js: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../assets/favicon.svg: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../assets/style.css: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../assets/notebook.css: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../assets/learning.css: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → #main: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → #main: fragment exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../index.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../index.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../wiki.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../deck.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../workflow.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../evidence.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../sources.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../wiki.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → #section-0: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → #section-0: fragment exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → #section-1: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → #section-1: fragment exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → #section-2: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → #section-2: fragment exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → #section-3: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → #section-3: fragment exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → #evidence: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → #evidence: fragment exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → tool-use.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → methods-are-different.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → tool-use.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → methods-are-different.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../sources.html: target exists",
-      "passed": true
-    },
-    {
-      "check": "wiki\\toolformer-paper.html → ../assets/site.js: target exists",
       "passed": true
     },
     {
@@ -3473,19 +3657,15 @@
       "passed": true
     },
     {
+      "check": "slide 15: rendered heading and lead unchanged",
+      "passed": true
+    },
+    {
       "check": "rendered inputs unchanged after build",
       "passed": true
     },
     {
       "check": "fresh-context source review has no unresolved required changes",
-      "passed": true
-    },
-    {
-      "check": "independent reviewed input unchanged: AGENTS.md",
-      "passed": true
-    },
-    {
-      "check": "independent reviewed input unchanged: requirements.md",
       "passed": true
     },
     {
@@ -3517,10 +3697,6 @@
       "passed": true
     },
     {
-      "check": "independent reviewed input unchanged: raw/S02.pdf",
-      "passed": true
-    },
-    {
       "check": "independent reviewed input unchanged: raw/S03.pdf",
       "passed": true
     },
@@ -3533,39 +3709,31 @@
       "passed": true
     },
     {
-      "check": "independent reviewed input unchanged: scripts/schedule_validator.py",
+      "check": "independent reviewed input unchanged: raw/S06.pdf",
       "passed": true
     },
     {
-      "check": "independent reviewed input unchanged: evidence/schedule-run.json",
+      "check": "S06 card gate actually passed without HTML dependency",
       "passed": true
     },
     {
-      "check": "independent reviewed input unchanged: evidence/topic-revision/requirements-confirmed.json",
+      "check": "post-S02 source gate actually passed without HTML dependency",
       "passed": true
     },
     {
-      "check": "independent reviewed input unchanged: evidence/topic-revision/sources-gate.json",
+      "check": "post-review source gate actually passed without HTML dependency",
       "passed": true
     },
     {
-      "check": "independent reviewed input unchanged: evidence/topic-revision/query-gate.json",
+      "check": "latest source gate: claims and sources unchanged since",
       "passed": true
     },
     {
-      "check": "independent reviewed input unchanged: evidence/topic-revision/authoring.json",
+      "check": "first review failure is preserved, not overwritten",
       "passed": true
     },
     {
-      "check": "source gate actually passed without HTML dependency",
-      "passed": true
-    },
-    {
-      "check": "early source gate inputs unchanged",
-      "passed": true
-    },
-    {
-      "check": "confirmed requirements then early source gate then Wiki then query gate then slides",
+      "check": "discussion, S06 gate, S02 gate, failed review, re-gate, query gate, slides, re-review in that order",
       "passed": true
     },
     {
@@ -3573,15 +3741,15 @@
       "passed": true
     },
     {
-      "check": "query gate canonical input hashes still match",
+      "check": "query gate input hashes still match",
       "passed": true
     },
     {
-      "check": "new Wiki and slides authored after recorded early gate",
+      "check": "Wiki changed only after the source gates",
       "passed": true
     },
     {
-      "check": "authored scheduling content unchanged",
+      "check": "slides written after the query gate and unchanged since",
       "passed": true
     },
     {
@@ -3665,10 +3833,6 @@
       "passed": true
     },
     {
-      "check": "S02: comparison evidence exists",
-      "passed": true
-    },
-    {
       "check": "S03: comparison evidence exists",
       "passed": true
     },
@@ -3678,6 +3842,10 @@
     },
     {
       "check": "S05: comparison evidence exists",
+      "passed": true
+    },
+    {
+      "check": "S06: comparison evidence exists",
       "passed": true
     },
     {

@@ -1,0 +1,85 @@
+{
+  "timestamp_utc": "2026-11-16T09:37:03.764337+00:00",
+  "stage": "NODE 04, Wiki query and coverage gate before writing slides",
+  "passed": true,
+  "questions": 4,
+  "source_coverage": [
+    "S01",
+    "S03",
+    "S04",
+    "S05",
+    "S06"
+  ],
+  "checks": [
+    {
+      "check": "Q1: selected Wiki pages exist",
+      "passed": true
+    },
+    {
+      "check": "Q1: selected evidence cards exist",
+      "passed": true
+    },
+    {
+      "check": "Q1: evidence comes from the selected Wiki pages",
+      "passed": true
+    },
+    {
+      "check": "Q2: selected Wiki pages exist",
+      "passed": true
+    },
+    {
+      "check": "Q2: selected evidence cards exist",
+      "passed": true
+    },
+    {
+      "check": "Q2: evidence comes from the selected Wiki pages",
+      "passed": true
+    },
+    {
+      "check": "Q3: selected Wiki pages exist",
+      "passed": true
+    },
+    {
+      "check": "Q3: selected evidence cards exist",
+      "passed": true
+    },
+    {
+      "check": "Q3: evidence comes from the selected Wiki pages",
+      "passed": true
+    },
+    {
+      "check": "Q4: selected Wiki pages exist",
+      "passed": true
+    },
+    {
+      "check": "Q4: selected evidence cards exist",
+      "passed": true
+    },
+    {
+      "check": "Q4: evidence comes from the selected Wiki pages",
+      "passed": true
+    },
+    {
+      "check": "queries cover every registered source",
+      "passed": true
+    },
+    {
+      "check": "every Wiki note cites existing cards",
+      "passed": true
+    },
+    {
+      "check": "every related Wiki link exists",
+      "passed": true
+    }
+  ],
+  "input_hashes": {
+    "content/wiki.json": "d5d774a3100ed6e6ede5c7dc9f1ca690455aa5f850323f2915fa51b3ba4b8576",
+    "content/queries.json": "2be1d1d9c4ab85992ef2a940656cd4284c3b45889d0948cc8d415e7dd604d1f4",
+    "content/claims.json": "fe28d8b48b0010ce89216d0beb1e2badac1ff81c188e7f61fadf989fac7e7821",
+    "content/sources.json": "f9a99b96cf5931f6bb12d82cd2713701737db5bc183d38df4193d79e14c7487a"
+  },
+  "slides_before_authoring": {
+    "content/deck.json": "ab90d289d63cff2f9f1f03d1bf6dbd1be0ead65736828d76bf54053eb38af74e"
+  },
+  "limit": "Checks selection and coverage only; it does not judge whether a page explains the topic well."
+}

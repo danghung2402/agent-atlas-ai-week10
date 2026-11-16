@@ -1,10 +1,10 @@
 # AI 排程 Wiki
 
 - [S01｜ReAct：依檢查結果修正排程](react-paper.md)
-- [S02｜Toolformer：分清工具、參數與結果](toolformer-paper.md)
 - [S03｜Reflexion：保留具體修正經驗](reflexion-paper.md)
 - [S04｜AgentBench：分開結束與成功](agentbench-paper.md)
 - [S05｜WebArena：檢查實際成果](webarena-paper.md)
+- [S06｜NATURAL PLAN：LLM 排日程的實測結果](natural-plan-paper.md)
 - [AI 排程助手：先分清固定事件與待辦](agent-basics.md)
 - [排程循環：產生 → 檢查 → 修正](react-loop.md)
 - [排程工具：輸入、回傳與使用限制](tool-use.md)

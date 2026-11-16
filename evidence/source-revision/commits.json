@@ -1,0 +1,32 @@
+[
+  {
+    "commit": "ae0911b",
+    "time": "2026-11-16T17:32:15+08:00",
+    "subject": "Record source-revision discussion before downloading or rewriting"
+  },
+  {
+    "commit": "977ccd4",
+    "time": "2026-11-16T17:34:51+08:00",
+    "subject": "Ingest S06 NATURAL PLAN: evidence cards, early source gate, source note"
+  },
+  {
+    "commit": "14cc4be",
+    "time": "2026-11-16T17:35:48+08:00",
+    "subject": "Retire S02 Toolformer: source, raw files and cards C03/C04/C11"
+  },
+  {
+    "commit": "6f0c0e5",
+    "time": "2026-11-16T17:37:08+08:00",
+    "subject": "Rewrite Wiki around NATURAL PLAN, then run a separate query gate"
+  },
+  {
+    "commit": "02d2332",
+    "time": "2026-11-16T17:40:37+08:00",
+    "subject": "Write 15 slides after the query gate; add NATURAL PLAN slide"
+  },
+  {
+    "commit": "96fff24",
+    "time": "2026-11-16T17:52:04+08:00",
+    "subject": "Fix content after failed fresh-context review (F01-F03, F09, advisories)"
+  }
+]

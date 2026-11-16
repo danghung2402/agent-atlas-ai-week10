@@ -1,0 +1,290 @@
+{
+  "timestamp_utc": "2026-11-16T09:51:17.400440+00:00",
+  "stage": "NODE 02, after fixing C18/C20 per review F01/F03, before fixing dependent Wiki notes",
+  "depends_on_rendered_html": false,
+  "passed": true,
+  "checks": [
+    {
+      "check": "five distinct registered sources",
+      "passed": true
+    },
+    {
+      "check": "S01 pinned PDF SHA-256",
+      "passed": true
+    },
+    {
+      "check": "S01 page count",
+      "passed": true
+    },
+    {
+      "check": "S03 pinned PDF SHA-256",
+      "passed": true
+    },
+    {
+      "check": "S03 page count",
+      "passed": true
+    },
+    {
+      "check": "S04 pinned PDF SHA-256",
+      "passed": true
+    },
+    {
+      "check": "S04 page count",
+      "passed": true
+    },
+    {
+      "check": "S05 pinned PDF SHA-256",
+      "passed": true
+    },
+    {
+      "check": "S05 page count",
+      "passed": true
+    },
+    {
+      "check": "S06 pinned PDF SHA-256",
+      "passed": true
+    },
+    {
+      "check": "S06 page count",
+      "passed": true
+    },
+    {
+      "check": "C01 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C01 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C01 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C02 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C02 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C02 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C05 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C05 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C05 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C06 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C06 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C06 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C07 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C07 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C07 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C08 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C08 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C08 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C09 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C09 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C09 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C10 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C10 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C10 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C12 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C12 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C12 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C13 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C13 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C13 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C14 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C14 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C14 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C15 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C15 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C15 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C16 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C16 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C16 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C17 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C17 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C17 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C18 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C18 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C18 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C19 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C19 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C19 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C20 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C20 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C20 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C21 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C21 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C21 anchor appears on cited page",
+      "passed": true
+    },
+    {
+      "check": "C22 registered PDF",
+      "passed": true
+    },
+    {
+      "check": "C22 physical PDF page",
+      "passed": true
+    },
+    {
+      "check": "C22 anchor appears on cited page",
+      "passed": true
+    }
+  ],
+  "input_hashes": {
+    "requirements.md": "d5295b4d0e606ca0f6fd2e1fc81c232319b3a1351b0ad37d749cc7d21e6796a4",
+    "content/sources.json": "f9a99b96cf5931f6bb12d82cd2713701737db5bc183d38df4193d79e14c7487a",
+    "content/claims.json": "390dbf23edcaf24b7a984211d2a382026f8a5e3bf87a733ec36e995896b2d12e"
+  },
+  "downstream_before_authoring": {
+    "content/wiki.json": "d5d774a3100ed6e6ede5c7dc9f1ca690455aa5f850323f2915fa51b3ba4b8576",
+    "content/deck.json": "007d0f48578d1f8334fd5a61e3bd46625164883ad73d05974cb8595a07461c67"
+  },
+  "limit": "File integrity and locators only; semantic support requires a separate source review."
+}

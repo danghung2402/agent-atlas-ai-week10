@@ -14,7 +14,7 @@ Reflexion 的文字記憶影響後續嘗試，不等於永久更新模型權重�
 
 ## 評估也會錯
 
-若輸入漏掉一堂課，驗收器可能通過不完整條件。因此先確認輸入，再看規則結果；不能以「AI 有反思」代替驗收。
+若輸入漏掉一堂課，驗收器可能通過不完整條件。因此先確認輸入，再看規則結果；不能以「AI 有反思」代替驗收。NATURAL PLAN 也報告：在 Trip Planning 中只要求模型自行檢查並修正，表現反而下降（不是日曆排程任務的結果）。本作業因此選擇依據外部檢查回報的具體違規來修正；這是設計選擇，論文沒有測試外部檢查器。
 
 ## 局部重跑
 
@@ -25,10 +25,12 @@ Reflexion 的文字記憶影響後續嘗試，不等於永久更新模型權重�
 - C05：Reflexion 把任務回饋整理成文字反思，存入情節記憶以影響之後的嘗試；此機制不更新模型權重。 [S03, PDF p.1](https://arxiv.org/pdf/2303.11366v4#page=1)
 - C12：Reflexion 的模組化描述區分 Actor、Evaluator 與 Self-Reflection：產生行動、評估結果與整理文字反思各有角色。 [S03, PDF p.3](https://arxiv.org/pdf/2303.11366v4#page=3)
 - C13：Reflexion 依賴自我評估或啟發式回饋的品質，論文指出其沒有成功的形式保證。 [S03, PDF p.2](https://arxiv.org/pdf/2303.11366v4#page=2)
+- C22：論文報告的自我修正實驗針對 Trip Planning：要求模型自行檢查並修正計畫，反而使所有模型表現顯著下降，GPT-4、Gemini 1.5 Pro 比 GPT-3.5 下降更多；這不是日曆排程任務的結果。 [S06, PDF p.8](https://arxiv.org/pdf/2406.04520v1#page=8)
 
 ## 相關筆記
 
 - [S03｜Reflexion：保留具體修正經驗](reflexion-paper.md)
+- [S06｜NATURAL PLAN：LLM 排日程的實測結果](natural-plan-paper.md)
 - [排程循環：產生 → 檢查 → 修正](react-loop.md)
 - [排程助手何時應該停下來？](when-stop.md)
 - [一日案例：從衝突草稿到可驗收日程](schedule-case.md)
@@ -36,5 +38,6 @@ Reflexion 的文字記憶影響後續嘗試，不等於永久更新模型權重�
 ## 反向連結
 
 - [S03｜Reflexion：保留具體修正經驗](reflexion-paper.md)
+- [S06｜NATURAL PLAN：LLM 排日程的實測結果](natural-plan-paper.md)
 - [排程循環：產生 → 檢查 → 修正](react-loop.md)
 - [一日案例：從衝突草稿到可驗收日程](schedule-case.md)

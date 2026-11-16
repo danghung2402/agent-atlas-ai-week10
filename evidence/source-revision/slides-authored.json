@@ -1,0 +1,9 @@
+{
+  "timestamp_utc": "2026-11-16T09:51:17.962112+00:00",
+  "author": "Claude (AI), per evidence/source-revision/requirements-confirmed.json",
+  "query_gate_at": "2026-11-16T09:51:17.772084+00:00",
+  "slides": 15,
+  "deck_sha256_before": "007d0f48578d1f8334fd5a61e3bd46625164883ad73d05974cb8595a07461c67",
+  "deck_sha256_after": "594eb530e3ae42aabde5fb449d530cc92fa2f67590663c43afdf2e83f0aa9500",
+  "inputs_unchanged_since_query_gate": true
+}
