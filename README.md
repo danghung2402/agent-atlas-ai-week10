@@ -1,6 +1,6 @@
 # Agent Atlas — AI Agents 教學作業
 
-2026-11-11 內容加強快照：五篇研究、十三篇 Wiki、十六張證據卡、十四頁教學簡報。
+2026-11-16 修訂快照（內容同 2026-11-11 加強版）：五篇研究、十三篇 Wiki、十六張證據卡、十四頁教學簡報。
 
 - [主要網站](https://danghung2402.github.io/agent-atlas-ai-week10/)
 - [Wiki](https://danghung2402.github.io/agent-atlas-ai-week10/wiki.html)
@@ -25,7 +25,9 @@ node scripts/check_schedule_js.cjs
 
 ## 驗證範圍
 
-Python 與 Node 的結果一致性、邊界案例及 HTML 引用已檢查。當次 Work 設定停用本機瀏覽器控制；本次新增 UI 與變更投影片未完成瀏覽器實測。舊版瀏覽器紀錄有另外標日期。
+Python 與 Node 的結果一致性、邊界案例及 HTML 引用已檢查。2026-11-11 當次本機瀏覽器控制停用，新增 UI 與變更投影片未實測；2026-11-16 已由 AI 以瀏覽器補測，紀錄見 [evidence/browser-v3.json](evidence/browser-v3.json)（AI 實測，非學生本人或外部人工）。舊版瀏覽器紀錄有另外標日期。
+
+2026-11-16 修訂：補做八題需求訪談（事後補充）、依實際紀錄改寫「哪一關最常出錯」的反思、修正流程頁描述。研究內容、證據卡、Wiki 與逐頁稿未變更。
 
 解壓縮離線包後，開啟 index.html 或 deck.html。內容閱讀與固定教學功能不需要 API key；外部論文 PDF 連結需要網路。
 
